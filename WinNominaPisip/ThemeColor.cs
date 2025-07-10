@@ -13,33 +13,35 @@ namespace WinNominaPisip
         public static Color SecondaryColor { get; set; }
         public static List<string> ColorList = new List<string>
         {
-                                                                    "#3F51B5",
-                                                                    "#009688",
-                                                                    "#FF5722",
-                                                                    "#607D8B",
-                                                                    "#FF9800",
-                                                                    "#9C27B0",
-                                                                    "#2196F3",
-                                                                    "#EA676C",
-                                                                    "#E41A4A",
-                                                                    "#5978BB",
-                                                                    "#018790",
-                                                                    "#0E3441",
-                                                                    "#00B0AD",
-                                                                    "#721D47",
-                                                                    "#EA4833",
-                                                                    "#EF937E",
-                                                                    "#F37521",
-                                                                    "#A12059",
-                                                                    "#126881",
-                                                                    "#8BC240",
-                                                                    "#364D5B",
-                                                                    "#C7DC5B",
-                                                                    "#0094BC",
-                                                                    "#E4126B",
-                                                                    "#43B76E",
-                                                                    "#7BCFE9",
-                                                                    "#B71C46"
+            // 🔵 Azules tecnológicos
+            "#1E88E5", // Azul primario brillante
+            "#1565C0", // Azul oscuro profesional
+            "#00ACC1", // Teal moderno
+            "#2E3A59", // Gris azulado para texto principal
+            "#2196F3", // Azul vívido (acciones)
+            "#3949AB", // Indigo moderno
+            "#4682B4", // Azul metálico
+            "#455A64", // Azul gris oscuro
+            "#1E90FF", // Azul juvenil profesional
+
+            // 🌿 Verdes tecnológicos
+            "#43A047", // Verde de éxito
+            "#2ECC71", // Verde esmeralda elegante
+            "#00B894", // Verde menta moderno
+            "#00897B", // Teal profundo
+            "#16A085", // Verde marino tranquilo
+
+            // 🩶 Grises sofisticados
+            "#607D8B", // Gris azulado intermedio
+            "#37474F", // Gris carbón
+
+            // 🔥 Rojos y naranjas sobrios
+            "#E53935", // Rojo de alerta (base tuya)
+            "#F44336", // Rojo moderno
+            "#FF7043", // Naranja quemado
+            "#FF6F61", // Coral suave
+            "#EF5350"  // Rojo intenso suave
+            
         };
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {

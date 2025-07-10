@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             panelLogo = new Panel();
             label3 = new Label();
             label1 = new Label();
             panelMenu = new Panel();
+            panel3 = new Panel();
             btnReportes = new FontAwesome.Sharp.IconButton();
             bntPuestos = new FontAwesome.Sharp.IconButton();
             btnVacaciones = new FontAwesome.Sharp.IconButton();
@@ -49,16 +51,19 @@
             btnSalir = new FontAwesome.Sharp.IconButton();
             labelTitulo = new Label();
             panelEscritorio = new Panel();
+            pictureBox1 = new PictureBox();
             panelLogo.SuspendLayout();
             panelMenu.SuspendLayout();
             panelLogo2.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            panelEscritorio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelLogo
             // 
-            panelLogo.BackColor = Color.FromArgb(0, 150, 135);
+            panelLogo.BackColor = SystemColors.HotTrack;
             panelLogo.Controls.Add(label3);
             panelLogo.Controls.Add(label1);
             panelLogo.Dock = DockStyle.Top;
@@ -88,7 +93,8 @@
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.FromArgb(51, 51, 76);
+            panelMenu.BackColor = SystemColors.HotTrack;
+            panelMenu.Controls.Add(panel3);
             panelMenu.Controls.Add(btnReportes);
             panelMenu.Controls.Add(bntPuestos);
             panelMenu.Controls.Add(btnVacaciones);
@@ -103,6 +109,14 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(220, 882);
             panelMenu.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 757);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(220, 125);
+            panel3.TabIndex = 35;
             // 
             // btnReportes
             // 
@@ -291,7 +305,7 @@
             // 
             // panelLogo2
             // 
-            panelLogo2.BackColor = Color.FromArgb(0, 150, 135);
+            panelLogo2.BackColor = SystemColors.HotTrack;
             panelLogo2.Controls.Add(panel2);
             panelLogo2.Controls.Add(panel1);
             panelLogo2.Controls.Add(labelTitulo);
@@ -372,7 +386,7 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.ForeColor = SystemColors.ControlLightLight;
             btnSalir.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            btnSalir.IconColor = SystemColors.ControlLightLight;
+            btnSalir.IconColor = SystemColors.ButtonFace;
             btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSalir.Location = new Point(6, 12);
             btnSalir.Name = "btnSalir";
@@ -386,21 +400,34 @@
             labelTitulo.AutoSize = true;
             labelTitulo.Font = new Font("MS Reference Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelTitulo.ForeColor = SystemColors.ControlLightLight;
-            labelTitulo.Location = new Point(415, 22);
+            labelTitulo.Location = new Point(357, 25);
             labelTitulo.Name = "labelTitulo";
-            labelTitulo.Size = new Size(77, 26);
+            labelTitulo.Size = new Size(199, 26);
             labelTitulo.TabIndex = 0;
-            labelTitulo.Text = "HOME";
+            labelTitulo.Text = "HOME S.NOMINA";
             // 
             // panelEscritorio
             // 
-            panelEscritorio.BackColor = Color.White;
+            panelEscritorio.BackColor = Color.Gainsboro;
+            panelEscritorio.Controls.Add(pictureBox1);
             panelEscritorio.Dock = DockStyle.Fill;
             panelEscritorio.ForeColor = Color.Black;
             panelEscritorio.Location = new Point(220, 80);
             panelEscritorio.Name = "panelEscritorio";
             panelEscritorio.Size = new Size(962, 802);
             panelEscritorio.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(177, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(567, 507);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -412,8 +439,6 @@
             Controls.Add(panelEscritorio);
             Controls.Add(panelLogo2);
             Controls.Add(panelMenu);
-            MaximumSize = new Size(1500, 1000);
-            MinimumSize = new Size(1200, 900);
             Name = "Main";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -424,6 +449,8 @@
             panelLogo2.PerformLayout();
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panelEscritorio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -449,5 +476,7 @@
         private Panel panel2;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private PictureBox pictureBox1;
+        private Panel panel3;
     }
 }

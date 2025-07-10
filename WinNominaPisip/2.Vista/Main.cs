@@ -57,7 +57,7 @@ namespace WinNominaPisip._2.Vista
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new Font("Microsoft Sans Serif", 12.5F, FontStyle.Regular);
 
-                    //panelMenu.BackColor = color;
+                    panelMenu.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
