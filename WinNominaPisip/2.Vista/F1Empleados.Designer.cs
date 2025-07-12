@@ -55,10 +55,6 @@
             panel1 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             textBox19 = new TextBox();
-            textBox18 = new TextBox();
-            textBox17 = new TextBox();
-            textBox16 = new TextBox();
-            textBox15 = new TextBox();
             textBox14 = new TextBox();
             textBox13 = new TextBox();
             textBox9 = new TextBox();
@@ -74,17 +70,19 @@
             label17 = new Label();
             label16 = new Label();
             label20 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnBuscar
             // 
-            btnBuscar.Anchor = AnchorStyles.None;
+            btnBuscar.Anchor = AnchorStyles.Right;
             btnBuscar.BackColor = Color.Transparent;
             btnBuscar.FlatAppearance.BorderSize = 2;
             btnBuscar.FlatStyle = FlatStyle.Flat;
@@ -95,7 +93,7 @@
             btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBuscar.IconSize = 35;
             btnBuscar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscar.Location = new Point(3, 2);
+            btnBuscar.Location = new Point(790, 12);
             btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Padding = new Padding(15, 0, 0, 0);
@@ -109,7 +107,7 @@
             // 
             // iconButton3
             // 
-            iconButton3.Anchor = AnchorStyles.None;
+            iconButton3.Anchor = AnchorStyles.Right;
             iconButton3.BackColor = Color.Transparent;
             iconButton3.FlatAppearance.BorderSize = 2;
             iconButton3.FlatStyle = FlatStyle.Flat;
@@ -120,7 +118,7 @@
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 35;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(3, 156);
+            iconButton3.Location = new Point(790, 166);
             iconButton3.Margin = new Padding(3, 2, 3, 2);
             iconButton3.Name = "iconButton3";
             iconButton3.Padding = new Padding(15, 0, 0, 0);
@@ -134,7 +132,7 @@
             // 
             // iconButton2
             // 
-            iconButton2.Anchor = AnchorStyles.None;
+            iconButton2.Anchor = AnchorStyles.Right;
             iconButton2.BackColor = Color.Transparent;
             iconButton2.FlatAppearance.BorderSize = 2;
             iconButton2.FlatStyle = FlatStyle.Flat;
@@ -145,11 +143,11 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 35;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(3, 106);
+            iconButton2.Location = new Point(790, 116);
             iconButton2.Margin = new Padding(3, 2, 3, 2);
             iconButton2.Name = "iconButton2";
             iconButton2.Padding = new Padding(15, 0, 0, 0);
-            iconButton2.Size = new Size(182, 46);
+            iconButton2.Size = new Size(180, 46);
             iconButton2.TabIndex = 71;
             iconButton2.Text = "Actualizar";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
@@ -159,7 +157,7 @@
             // 
             // iconButton1
             // 
-            iconButton1.Anchor = AnchorStyles.None;
+            iconButton1.Anchor = AnchorStyles.Right;
             iconButton1.BackColor = Color.Transparent;
             iconButton1.FlatAppearance.BorderSize = 2;
             iconButton1.FlatStyle = FlatStyle.Flat;
@@ -170,7 +168,7 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 35;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(3, 54);
+            iconButton1.Location = new Point(790, 64);
             iconButton1.Margin = new Padding(3, 2, 3, 2);
             iconButton1.Name = "iconButton1";
             iconButton1.Padding = new Padding(15, 0, 0, 0);
@@ -187,11 +185,11 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.Gainsboro;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 228);
+            dataGridView1.Location = new Point(-9, 228);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(991, 255);
+            dataGridView1.Size = new Size(1003, 267);
             dataGridView1.TabIndex = 48;
             // 
             // textBox3
@@ -395,8 +393,11 @@
             // panel1
             // 
             panel1.BackColor = Color.Gainsboro;
+            panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(tableLayoutPanel2);
-            panel1.Controls.Add(flowLayoutPanel1);
+            panel1.Controls.Add(iconButton2);
+            panel1.Controls.Add(iconButton1);
+            panel1.Controls.Add(iconButton3);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
@@ -406,16 +407,13 @@
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel2.ColumnCount = 4;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.6486473F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.3513527F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 149F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 219F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
             tableLayoutPanel2.Controls.Add(textBox19, 3, 4);
-            tableLayoutPanel2.Controls.Add(textBox18, 1, 4);
-            tableLayoutPanel2.Controls.Add(textBox17, 3, 3);
-            tableLayoutPanel2.Controls.Add(textBox16, 1, 3);
-            tableLayoutPanel2.Controls.Add(textBox15, 3, 2);
             tableLayoutPanel2.Controls.Add(textBox14, 1, 2);
             tableLayoutPanel2.Controls.Add(textBox13, 3, 1);
             tableLayoutPanel2.Controls.Add(textBox9, 1, 1);
@@ -431,97 +429,65 @@
             tableLayoutPanel2.Controls.Add(label17, 2, 3);
             tableLayoutPanel2.Controls.Add(label16, 2, 2);
             tableLayoutPanel2.Controls.Add(label20, 2, 1);
-            tableLayoutPanel2.Location = new Point(12, 10);
+            tableLayoutPanel2.Controls.Add(comboBox1, 1, 4);
+            tableLayoutPanel2.Controls.Add(comboBox2, 3, 2);
+            tableLayoutPanel2.Controls.Add(dateTimePicker1, 1, 3);
+            tableLayoutPanel2.Controls.Add(dateTimePicker2, 3, 3);
+            tableLayoutPanel2.Location = new Point(12, 11);
             tableLayoutPanel2.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 5;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 49.1071434F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50.8928566F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 41F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.Size = new Size(738, 204);
             tableLayoutPanel2.TabIndex = 86;
             // 
             // textBox19
             // 
             textBox19.Anchor = AnchorStyles.None;
-            textBox19.Location = new Point(532, 173);
+            textBox19.Location = new Point(518, 171);
             textBox19.Margin = new Padding(3, 2, 3, 2);
             textBox19.Name = "textBox19";
-            textBox19.Size = new Size(192, 22);
+            textBox19.Size = new Size(180, 22);
             textBox19.TabIndex = 19;
-            // 
-            // textBox18
-            // 
-            textBox18.Anchor = AnchorStyles.None;
-            textBox18.Location = new Point(159, 173);
-            textBox18.Margin = new Padding(3, 2, 3, 2);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(192, 22);
-            textBox18.TabIndex = 18;
-            // 
-            // textBox17
-            // 
-            textBox17.Anchor = AnchorStyles.None;
-            textBox17.Location = new Point(532, 133);
-            textBox17.Margin = new Padding(3, 2, 3, 2);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(192, 22);
-            textBox17.TabIndex = 17;
-            // 
-            // textBox16
-            // 
-            textBox16.Anchor = AnchorStyles.None;
-            textBox16.Location = new Point(159, 133);
-            textBox16.Margin = new Padding(3, 2, 3, 2);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(192, 22);
-            textBox16.TabIndex = 16;
-            // 
-            // textBox15
-            // 
-            textBox15.Anchor = AnchorStyles.None;
-            textBox15.Location = new Point(532, 91);
-            textBox15.Margin = new Padding(3, 2, 3, 2);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(192, 22);
-            textBox15.TabIndex = 15;
             // 
             // textBox14
             // 
             textBox14.Anchor = AnchorStyles.None;
-            textBox14.Location = new Point(159, 91);
+            textBox14.Location = new Point(150, 89);
             textBox14.Margin = new Padding(3, 2, 3, 2);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(192, 22);
+            textBox14.Size = new Size(178, 22);
             textBox14.TabIndex = 14;
             // 
             // textBox13
             // 
             textBox13.Anchor = AnchorStyles.None;
-            textBox13.Location = new Point(532, 50);
+            textBox13.Location = new Point(518, 49);
             textBox13.Margin = new Padding(3, 2, 3, 2);
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(192, 22);
+            textBox13.Size = new Size(180, 22);
             textBox13.TabIndex = 13;
             // 
             // textBox9
             // 
             textBox9.Anchor = AnchorStyles.None;
-            textBox9.Location = new Point(159, 50);
+            textBox9.Location = new Point(150, 49);
             textBox9.Margin = new Padding(3, 2, 3, 2);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(192, 22);
+            textBox9.Size = new Size(178, 22);
             textBox9.TabIndex = 12;
             // 
             // textBox8
             // 
             textBox8.Anchor = AnchorStyles.None;
-            textBox8.Location = new Point(532, 9);
+            textBox8.Location = new Point(518, 9);
             textBox8.Margin = new Padding(3, 2, 3, 2);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(192, 22);
+            textBox8.Size = new Size(180, 22);
             textBox8.TabIndex = 11;
             // 
             // label10
@@ -529,7 +495,7 @@
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label10.Location = new Point(26, 12);
+            label10.Location = new Point(10, 12);
             label10.Name = "label10";
             label10.Size = new Size(89, 16);
             label10.TabIndex = 0;
@@ -540,7 +506,7 @@
             label11.Anchor = AnchorStyles.None;
             label11.AutoSize = true;
             label11.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label11.Location = new Point(41, 53);
+            label11.Location = new Point(25, 52);
             label11.Name = "label11";
             label11.Size = new Size(59, 16);
             label11.TabIndex = 1;
@@ -551,7 +517,7 @@
             label12.Anchor = AnchorStyles.None;
             label12.AutoSize = true;
             label12.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label12.Location = new Point(41, 94);
+            label12.Location = new Point(25, 92);
             label12.Name = "label12";
             label12.Size = new Size(60, 16);
             label12.TabIndex = 2;
@@ -562,7 +528,7 @@
             label13.Anchor = AnchorStyles.None;
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label13.Location = new Point(25, 136);
+            label13.Location = new Point(9, 132);
             label13.Name = "label13";
             label13.Size = new Size(92, 16);
             label13.TabIndex = 3;
@@ -573,7 +539,7 @@
             label14.Anchor = AnchorStyles.None;
             label14.AutoSize = true;
             label14.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label14.Location = new Point(43, 176);
+            label14.Location = new Point(27, 174);
             label14.Name = "label14";
             label14.Size = new Size(55, 16);
             label14.TabIndex = 4;
@@ -584,7 +550,7 @@
             label15.Anchor = AnchorStyles.None;
             label15.AutoSize = true;
             label15.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label15.Location = new Point(417, 12);
+            label15.Location = new Point(396, 12);
             label15.Name = "label15";
             label15.Size = new Size(53, 16);
             label15.TabIndex = 5;
@@ -595,7 +561,7 @@
             label19.Anchor = AnchorStyles.None;
             label19.AutoSize = true;
             label19.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label19.Location = new Point(417, 176);
+            label19.Location = new Point(396, 174);
             label19.Name = "label19";
             label19.Size = new Size(53, 16);
             label19.TabIndex = 9;
@@ -604,10 +570,10 @@
             // textBox7
             // 
             textBox7.Anchor = AnchorStyles.None;
-            textBox7.Location = new Point(159, 9);
+            textBox7.Location = new Point(150, 9);
             textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(192, 22);
+            textBox7.Size = new Size(178, 22);
             textBox7.TabIndex = 10;
             // 
             // label17
@@ -615,7 +581,7 @@
             label17.Anchor = AnchorStyles.None;
             label17.AutoSize = true;
             label17.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label17.Location = new Point(409, 136);
+            label17.Location = new Point(388, 132);
             label17.Name = "label17";
             label17.Size = new Size(69, 16);
             label17.TabIndex = 7;
@@ -626,7 +592,7 @@
             label16.Anchor = AnchorStyles.None;
             label16.AutoSize = true;
             label16.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label16.Location = new Point(417, 94);
+            label16.Location = new Point(397, 92);
             label16.Name = "label16";
             label16.Size = new Size(52, 16);
             label16.TabIndex = 6;
@@ -637,24 +603,45 @@
             label20.Anchor = AnchorStyles.None;
             label20.AutoSize = true;
             label20.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label20.Location = new Point(418, 53);
+            label20.Location = new Point(397, 52);
             label20.Name = "label20";
             label20.Size = new Size(51, 16);
             label20.TabIndex = 20;
             label20.Text = "Correo:";
             // 
-            // flowLayoutPanel1
+            // comboBox1
             // 
-            flowLayoutPanel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            flowLayoutPanel1.Controls.Add(btnBuscar);
-            flowLayoutPanel1.Controls.Add(iconButton1);
-            flowLayoutPanel1.Controls.Add(iconButton2);
-            flowLayoutPanel1.Controls.Add(iconButton3);
-            flowLayoutPanel1.Location = new Point(768, 6);
-            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(204, 209);
-            flowLayoutPanel1.TabIndex = 29;
+            comboBox1.Anchor = AnchorStyles.None;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(150, 168);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(178, 24);
+            comboBox1.TabIndex = 21;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Anchor = AnchorStyles.None;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(518, 86);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(180, 24);
+            comboBox2.TabIndex = 22;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.None;
+            dateTimePicker1.Location = new Point(150, 129);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(178, 22);
+            dateTimePicker1.TabIndex = 23;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Anchor = AnchorStyles.None;
+            dateTimePicker2.Location = new Point(518, 129);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(180, 22);
+            dateTimePicker2.TabIndex = 24;
             // 
             // F1Empleados
             // 
@@ -674,7 +661,6 @@
             panel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -710,13 +696,8 @@
         private Label label2;
         private Label label3;
         private TextBox textBox10;
-        private FlowLayoutPanel flowLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TextBox textBox19;
-        private TextBox textBox18;
-        private TextBox textBox17;
-        private TextBox textBox16;
-        private TextBox textBox15;
         private TextBox textBox14;
         private TextBox textBox13;
         private TextBox textBox9;
@@ -732,5 +713,9 @@
         private Label label19;
         private TextBox textBox7;
         private Label label20;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
     }
 }

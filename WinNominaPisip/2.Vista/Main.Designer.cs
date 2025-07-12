@@ -33,13 +33,14 @@
             label3 = new Label();
             label1 = new Label();
             panelMenu = new Panel();
-            panel3 = new Panel();
-            btnReportes = new FontAwesome.Sharp.IconButton();
-            bntPuestos = new FontAwesome.Sharp.IconButton();
             btnVacaciones = new FontAwesome.Sharp.IconButton();
-            btnAsistencias = new FontAwesome.Sharp.IconButton();
+            bntPuestos = new FontAwesome.Sharp.IconButton();
+            btnReportes = new FontAwesome.Sharp.IconButton();
+            btnNomina = new FontAwesome.Sharp.IconButton();
             btnPercepciones = new FontAwesome.Sharp.IconButton();
+            panel3 = new Panel();
             Nomina = new FontAwesome.Sharp.IconButton();
+            btnAsistencias = new FontAwesome.Sharp.IconButton();
             btnContratos = new FontAwesome.Sharp.IconButton();
             btnEmpleados = new FontAwesome.Sharp.IconButton();
             panelLogo2 = new Panel();
@@ -54,6 +55,7 @@
             pictureBox1 = new PictureBox();
             panelLogo.SuspendLayout();
             panelMenu.SuspendLayout();
+            panel3.SuspendLayout();
             panelLogo2.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -94,13 +96,13 @@
             // panelMenu
             // 
             panelMenu.BackColor = SystemColors.HotTrack;
-            panelMenu.Controls.Add(panel3);
-            panelMenu.Controls.Add(btnReportes);
-            panelMenu.Controls.Add(bntPuestos);
             panelMenu.Controls.Add(btnVacaciones);
-            panelMenu.Controls.Add(btnAsistencias);
+            panelMenu.Controls.Add(bntPuestos);
+            panelMenu.Controls.Add(btnReportes);
+            panelMenu.Controls.Add(btnNomina);
             panelMenu.Controls.Add(btnPercepciones);
-            panelMenu.Controls.Add(Nomina);
+            panelMenu.Controls.Add(panel3);
+            panelMenu.Controls.Add(btnAsistencias);
             panelMenu.Controls.Add(btnContratos);
             panelMenu.Controls.Add(btnEmpleados);
             panelMenu.Controls.Add(panelLogo);
@@ -110,36 +112,28 @@
             panelMenu.Size = new Size(220, 882);
             panelMenu.TabIndex = 20;
             // 
-            // panel3
+            // btnVacaciones
             // 
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 757);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(220, 125);
-            panel3.TabIndex = 35;
-            // 
-            // btnReportes
-            // 
-            btnReportes.BackColor = Color.Transparent;
-            btnReportes.Dock = DockStyle.Top;
-            btnReportes.FlatAppearance.BorderSize = 0;
-            btnReportes.FlatStyle = FlatStyle.Flat;
-            btnReportes.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReportes.ForeColor = Color.Gainsboro;
-            btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            btnReportes.IconColor = Color.Gainsboro;
-            btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReportes.Location = new Point(0, 465);
-            btnReportes.Name = "btnReportes";
-            btnReportes.Padding = new Padding(12, 0, 0, 0);
-            btnReportes.Size = new Size(220, 55);
-            btnReportes.TabIndex = 34;
-            btnReportes.Text = " Reportes";
-            btnReportes.TextAlign = ContentAlignment.MiddleLeft;
-            btnReportes.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnReportes.UseVisualStyleBackColor = false;
-            btnReportes.Click += btnReportes_Click;
+            btnVacaciones.BackColor = Color.Transparent;
+            btnVacaciones.Dock = DockStyle.Top;
+            btnVacaciones.FlatAppearance.BorderSize = 0;
+            btnVacaciones.FlatStyle = FlatStyle.Flat;
+            btnVacaciones.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVacaciones.ForeColor = Color.Gainsboro;
+            btnVacaciones.IconChar = FontAwesome.Sharp.IconChar.Hourglass2;
+            btnVacaciones.IconColor = Color.Gainsboro;
+            btnVacaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVacaciones.ImageAlign = ContentAlignment.MiddleLeft;
+            btnVacaciones.Location = new Point(0, 465);
+            btnVacaciones.Name = "btnVacaciones";
+            btnVacaciones.Padding = new Padding(12, 0, 0, 0);
+            btnVacaciones.Size = new Size(220, 55);
+            btnVacaciones.TabIndex = 45;
+            btnVacaciones.Text = " Vacaciones";
+            btnVacaciones.TextAlign = ContentAlignment.MiddleLeft;
+            btnVacaciones.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnVacaciones.UseVisualStyleBackColor = false;
+            btnVacaciones.Click += btnVacaciones_Click_1;
             // 
             // bntPuestos
             // 
@@ -157,58 +151,58 @@
             bntPuestos.Name = "bntPuestos";
             bntPuestos.Padding = new Padding(12, 0, 0, 0);
             bntPuestos.Size = new Size(220, 55);
-            bntPuestos.TabIndex = 33;
+            bntPuestos.TabIndex = 44;
             bntPuestos.Text = " Puestos";
             bntPuestos.TextAlign = ContentAlignment.MiddleLeft;
             bntPuestos.TextImageRelation = TextImageRelation.ImageBeforeText;
             bntPuestos.UseVisualStyleBackColor = false;
-            bntPuestos.Click += bntPuestos_Click;
+            bntPuestos.Click += bntPuestos_Click_1;
             // 
-            // btnVacaciones
+            // btnReportes
             // 
-            btnVacaciones.BackColor = Color.Transparent;
-            btnVacaciones.Dock = DockStyle.Top;
-            btnVacaciones.FlatAppearance.BorderSize = 0;
-            btnVacaciones.FlatStyle = FlatStyle.Flat;
-            btnVacaciones.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnVacaciones.ForeColor = Color.Gainsboro;
-            btnVacaciones.IconChar = FontAwesome.Sharp.IconChar.Hourglass2;
-            btnVacaciones.IconColor = Color.Gainsboro;
-            btnVacaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnVacaciones.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVacaciones.Location = new Point(0, 355);
-            btnVacaciones.Name = "btnVacaciones";
-            btnVacaciones.Padding = new Padding(12, 0, 0, 0);
-            btnVacaciones.Size = new Size(220, 55);
-            btnVacaciones.TabIndex = 32;
-            btnVacaciones.Text = " Vacaciones";
-            btnVacaciones.TextAlign = ContentAlignment.MiddleLeft;
-            btnVacaciones.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnVacaciones.UseVisualStyleBackColor = false;
-            btnVacaciones.Click += btnVacaciones_Click;
+            btnReportes.BackColor = Color.Transparent;
+            btnReportes.Dock = DockStyle.Top;
+            btnReportes.FlatAppearance.BorderSize = 0;
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReportes.ForeColor = Color.Gainsboro;
+            btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
+            btnReportes.IconColor = Color.Gainsboro;
+            btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReportes.Location = new Point(0, 355);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Padding = new Padding(12, 0, 0, 0);
+            btnReportes.Size = new Size(220, 55);
+            btnReportes.TabIndex = 43;
+            btnReportes.Text = " Reportes";
+            btnReportes.TextAlign = ContentAlignment.MiddleLeft;
+            btnReportes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click_1;
             // 
-            // btnAsistencias
+            // btnNomina
             // 
-            btnAsistencias.BackColor = Color.Transparent;
-            btnAsistencias.Dock = DockStyle.Top;
-            btnAsistencias.FlatAppearance.BorderSize = 0;
-            btnAsistencias.FlatStyle = FlatStyle.Flat;
-            btnAsistencias.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAsistencias.ForeColor = Color.Gainsboro;
-            btnAsistencias.IconChar = FontAwesome.Sharp.IconChar.UserClock;
-            btnAsistencias.IconColor = Color.Gainsboro;
-            btnAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAsistencias.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAsistencias.Location = new Point(0, 300);
-            btnAsistencias.Name = "btnAsistencias";
-            btnAsistencias.Padding = new Padding(12, 0, 0, 0);
-            btnAsistencias.Size = new Size(220, 55);
-            btnAsistencias.TabIndex = 31;
-            btnAsistencias.Text = " Asistencias";
-            btnAsistencias.TextAlign = ContentAlignment.MiddleLeft;
-            btnAsistencias.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAsistencias.UseVisualStyleBackColor = false;
-            btnAsistencias.Click += btnAsistencias_Click;
+            btnNomina.BackColor = Color.Transparent;
+            btnNomina.Dock = DockStyle.Top;
+            btnNomina.FlatAppearance.BorderSize = 0;
+            btnNomina.FlatStyle = FlatStyle.Flat;
+            btnNomina.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNomina.ForeColor = Color.Gainsboro;
+            btnNomina.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            btnNomina.IconColor = Color.Gainsboro;
+            btnNomina.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnNomina.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNomina.Location = new Point(0, 300);
+            btnNomina.Name = "btnNomina";
+            btnNomina.Padding = new Padding(12, 0, 0, 0);
+            btnNomina.Size = new Size(220, 55);
+            btnNomina.TabIndex = 41;
+            btnNomina.Text = " Nominas";
+            btnNomina.TextAlign = ContentAlignment.MiddleLeft;
+            btnNomina.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnNomina.UseVisualStyleBackColor = false;
+            btnNomina.Click += btnNomina_Click_1;
             // 
             // btnPercepciones
             // 
@@ -226,12 +220,21 @@
             btnPercepciones.Name = "btnPercepciones";
             btnPercepciones.Padding = new Padding(12, 0, 0, 0);
             btnPercepciones.Size = new Size(220, 55);
-            btnPercepciones.TabIndex = 30;
+            btnPercepciones.TabIndex = 39;
             btnPercepciones.Text = " Percepciones";
             btnPercepciones.TextAlign = ContentAlignment.MiddleLeft;
             btnPercepciones.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnPercepciones.UseVisualStyleBackColor = false;
-            btnPercepciones.Click += btnPercepciones_Click;
+            btnPercepciones.Click += btnPercepciones_Click_1;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(Nomina);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 757);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(220, 125);
+            panel3.TabIndex = 35;
             // 
             // Nomina
             // 
@@ -245,16 +248,38 @@
             Nomina.IconColor = Color.Gainsboro;
             Nomina.IconFont = FontAwesome.Sharp.IconFont.Auto;
             Nomina.ImageAlign = ContentAlignment.MiddleLeft;
-            Nomina.Location = new Point(0, 190);
+            Nomina.Location = new Point(0, 0);
             Nomina.Name = "Nomina";
             Nomina.Padding = new Padding(12, 0, 0, 0);
             Nomina.Size = new Size(220, 55);
-            Nomina.TabIndex = 29;
+            Nomina.TabIndex = 30;
             Nomina.Text = " Nominas";
             Nomina.TextAlign = ContentAlignment.MiddleLeft;
             Nomina.TextImageRelation = TextImageRelation.ImageBeforeText;
             Nomina.UseVisualStyleBackColor = false;
-            Nomina.Click += Nomina_Click;
+            // 
+            // btnAsistencias
+            // 
+            btnAsistencias.BackColor = Color.Transparent;
+            btnAsistencias.Dock = DockStyle.Top;
+            btnAsistencias.FlatAppearance.BorderSize = 0;
+            btnAsistencias.FlatStyle = FlatStyle.Flat;
+            btnAsistencias.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAsistencias.ForeColor = Color.Gainsboro;
+            btnAsistencias.IconChar = FontAwesome.Sharp.IconChar.UserClock;
+            btnAsistencias.IconColor = Color.Gainsboro;
+            btnAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAsistencias.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAsistencias.Location = new Point(0, 190);
+            btnAsistencias.Name = "btnAsistencias";
+            btnAsistencias.Padding = new Padding(12, 0, 0, 0);
+            btnAsistencias.Size = new Size(220, 55);
+            btnAsistencias.TabIndex = 31;
+            btnAsistencias.Text = " Asistencias";
+            btnAsistencias.TextAlign = ContentAlignment.MiddleLeft;
+            btnAsistencias.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAsistencias.UseVisualStyleBackColor = false;
+            btnAsistencias.Click += btnAsistencias_Click;
             // 
             // btnContratos
             // 
@@ -408,9 +433,9 @@
             // 
             // panelEscritorio
             // 
+            panelEscritorio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelEscritorio.BackColor = Color.Gainsboro;
             panelEscritorio.Controls.Add(pictureBox1);
-            panelEscritorio.Dock = DockStyle.Fill;
             panelEscritorio.ForeColor = Color.Black;
             panelEscritorio.Location = new Point(220, 80);
             panelEscritorio.Name = "panelEscritorio";
@@ -422,7 +447,7 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(177, 6);
+            pictureBox1.Location = new Point(184, 132);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(567, 507);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -445,6 +470,7 @@
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
             panelMenu.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             panelLogo2.ResumeLayout(false);
             panelLogo2.PerformLayout();
             panel2.ResumeLayout(false);
@@ -458,12 +484,7 @@
         private Panel panelLogo;
         private Label label1;
         private Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnReportes;
-        private FontAwesome.Sharp.IconButton bntPuestos;
-        private FontAwesome.Sharp.IconButton btnVacaciones;
         private FontAwesome.Sharp.IconButton btnAsistencias;
-        private FontAwesome.Sharp.IconButton btnPercepciones;
-        private FontAwesome.Sharp.IconButton Nomina;
         private FontAwesome.Sharp.IconButton btnContratos;
         private FontAwesome.Sharp.IconButton btnEmpleados;
         private Panel panelLogo2;
@@ -478,5 +499,11 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private PictureBox pictureBox1;
         private Panel panel3;
+        private FontAwesome.Sharp.IconButton Nomina;
+        private FontAwesome.Sharp.IconButton btnVacaciones;
+        private FontAwesome.Sharp.IconButton bntPuestos;
+        private FontAwesome.Sharp.IconButton btnReportes;
+        private FontAwesome.Sharp.IconButton btnNomina;
+        private FontAwesome.Sharp.IconButton btnPercepciones;
     }
 }

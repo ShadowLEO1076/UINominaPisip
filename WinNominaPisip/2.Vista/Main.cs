@@ -118,19 +118,8 @@ namespace WinNominaPisip._2.Vista
 
         }
 
-        private void Nomina_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F3Nominas(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Nominas";
-        }
 
-        private void btnPercepciones_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F4Percepciones(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Percepciones";
-        }
+   
 
         private void btnAsistencias_Click(object sender, EventArgs e)
         {
@@ -139,25 +128,52 @@ namespace WinNominaPisip._2.Vista
             labelTitulo.Text = "Gestion Asistencias ";
         }
 
-        private void btnVacaciones_Click(object sender, EventArgs e)
+      
+        private void btnNomina_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F6Vacaciones(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Vacaciones";
+            OpenChildForm(new _2.Vista.F3Nominas(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Nomina";
+
         }
 
-        private void bntPuestos_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F7Puestos(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Puestos";
-        }
 
-        private void btnReportes_Click(object sender, EventArgs e)
+
+      
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenChildForm(new _2.Vista.F8Reportes(currentButton.BackColor), sender);
             labelTitulo.Text = "Gestion Reportes";
+
+        }
+        private void btnPercepciones_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F4Percepciones(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Percepciones";
+
+        }
+
+        
+
+        
+
+        private void bntPuestos_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F7Puestos(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Puestos";
+
+        }
+
+        private void btnVacaciones_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F6Vacaciones(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Vacaciones";
+
         }
     }
 }
