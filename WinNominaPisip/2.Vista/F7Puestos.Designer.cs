@@ -36,7 +36,7 @@
             iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             iconButton1.IconColor = Color.Black;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(366, 165);
+            iconButton1.Location = new Point(636, 94);
             iconButton1.Name = "iconButton1";
             iconButton1.Size = new Size(94, 29);
             iconButton1.TabIndex = 0;

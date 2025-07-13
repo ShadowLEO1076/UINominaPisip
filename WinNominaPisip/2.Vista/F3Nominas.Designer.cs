@@ -248,7 +248,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Gainsboro;
+            panel1.BackColor = Color.DarkGray;
             panel1.Controls.Add(iconButton2);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(iconButton3);
@@ -265,7 +265,7 @@
             // 
             iconButton2.Anchor = AnchorStyles.Right;
             iconButton2.BackColor = Color.Transparent;
-            iconButton2.FlatAppearance.BorderSize = 2;
+            iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton2.ForeColor = Color.WhiteSmoke;
@@ -289,7 +289,7 @@
             // 
             btnBuscar.Anchor = AnchorStyles.Right;
             btnBuscar.BackColor = Color.Transparent;
-            btnBuscar.FlatAppearance.BorderSize = 2;
+            btnBuscar.FlatAppearance.BorderSize = 0;
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.Font = new Font("Microsoft Sans Serif", 9F);
             btnBuscar.ForeColor = Color.WhiteSmoke;
@@ -313,7 +313,7 @@
             // 
             iconButton3.Anchor = AnchorStyles.Right;
             iconButton3.BackColor = Color.Transparent;
-            iconButton3.FlatAppearance.BorderSize = 2;
+            iconButton3.FlatAppearance.BorderSize = 0;
             iconButton3.FlatStyle = FlatStyle.Flat;
             iconButton3.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton3.ForeColor = Color.WhiteSmoke;
@@ -337,7 +337,7 @@
             // 
             iconButton1.Anchor = AnchorStyles.Right;
             iconButton1.BackColor = Color.Transparent;
-            iconButton1.FlatAppearance.BorderSize = 2;
+            iconButton1.FlatAppearance.BorderSize = 0;
             iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton1.ForeColor = Color.WhiteSmoke;

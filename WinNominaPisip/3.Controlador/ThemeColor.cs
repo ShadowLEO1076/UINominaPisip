@@ -14,34 +14,19 @@ namespace WinNominaPisip
         public static List<string> ColorList = new List<string>
         {
             // 🔵 Azules tecnológicos
-            "#1E88E5", // Azul primario brillante
-            "#1565C0", // Azul oscuro profesional
-            "#00ACC1", // Teal moderno
-            "#2E3A59", // Gris azulado para texto principal
-            "#2196F3", // Azul vívido (acciones)
-            "#3949AB", // Indigo moderno
-            "#4682B4", // Azul metálico
-            "#455A64", // Azul gris oscuro
-            "#1E90FF", // Azul juvenil profesional
-
-            // 🌿 Verdes tecnológicos
-            "#43A047", // Verde de éxito
-            "#2ECC71", // Verde esmeralda elegante
-            "#00B894", // Verde menta moderno
-            "#00897B", // Teal profundo
-            "#16A085", // Verde marino tranquilo
-
-            // 🩶 Grises sofisticados
-            "#607D8B", // Gris azulado intermedio
-            "#37474F", // Gris carbón
-
-            // 🔥 Rojos y naranjas sobrios
-            "#E53935", // Rojo de alerta (base tuya)
-            "#F44336", // Rojo moderno
-            "#FF7043", // Naranja quemado
-            "#FF6F61", // Coral suave
-            "#EF5350"  // Rojo intenso suave
-            
+             "#607D8B", // Gris azulado intermedio
+             "#37474F", // Gris carbón
+             "#455A64", // Azul gris oscuro
+             "#2E3A59", // Gris azulado para texto principal
+             "#1565C0", // Azul oscuro profesional
+             "#3949AB", // Indigo moderno
+             ///
+             "#2ECC71", // Verde esmeralda elegante
+             "#00B894", // Verde menta moderno
+             "#00897B", // Teal profundo
+             "#16A085", // Verde marino tranquilo
+             "#FF6F61", // Coral suave
+             "#EF5350"  // Rojo intenso suave
         };
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {

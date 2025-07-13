@@ -65,14 +65,14 @@ namespace WinNominaPisip._2.Vista
             {
                 if (control is IconButton btn)
                 {
-                    btn.BackColor = ThemeColor.SecondaryColor;
+                    btn.BackColor = ThemeColor.PrimaryColor;// SecondaryColor;
                     btn.ForeColor = Color.White;
                     btn.IconColor = Color.White;
                     btn.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
                 }
                 else if (control is Label lbl)
                 {
-                    lbl.ForeColor = Color.White;
+                    lbl.ForeColor = Color.Black;
                 }
                 else if (control.HasChildren)
                 {

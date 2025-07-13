@@ -39,15 +39,16 @@
             btnNomina = new FontAwesome.Sharp.IconButton();
             btnPercepciones = new FontAwesome.Sharp.IconButton();
             panel3 = new Panel();
-            Nomina = new FontAwesome.Sharp.IconButton();
+            panel4 = new Panel();
+            iconButton3 = new FontAwesome.Sharp.IconButton();
             btnAsistencias = new FontAwesome.Sharp.IconButton();
             btnContratos = new FontAwesome.Sharp.IconButton();
             btnEmpleados = new FontAwesome.Sharp.IconButton();
             panelLogo2 = new Panel();
             panel2 = new Panel();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            btnmin = new FontAwesome.Sharp.IconButton();
+            btnClose = new FontAwesome.Sharp.IconButton();
+            btnMax = new FontAwesome.Sharp.IconButton();
+            btnMin = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
             btnSalir = new FontAwesome.Sharp.IconButton();
             labelTitulo = new Label();
@@ -56,6 +57,7 @@
             panelLogo.SuspendLayout();
             panelMenu.SuspendLayout();
             panel3.SuspendLayout();
+            panel4.SuspendLayout();
             panelLogo2.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -117,6 +119,7 @@
             btnVacaciones.BackColor = Color.Transparent;
             btnVacaciones.Dock = DockStyle.Top;
             btnVacaciones.FlatAppearance.BorderSize = 0;
+            btnVacaciones.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnVacaciones.FlatStyle = FlatStyle.Flat;
             btnVacaciones.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVacaciones.ForeColor = Color.Gainsboro;
@@ -140,6 +143,7 @@
             bntPuestos.BackColor = Color.Transparent;
             bntPuestos.Dock = DockStyle.Top;
             bntPuestos.FlatAppearance.BorderSize = 0;
+            bntPuestos.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             bntPuestos.FlatStyle = FlatStyle.Flat;
             bntPuestos.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bntPuestos.ForeColor = Color.Gainsboro;
@@ -163,6 +167,7 @@
             btnReportes.BackColor = Color.Transparent;
             btnReportes.Dock = DockStyle.Top;
             btnReportes.FlatAppearance.BorderSize = 0;
+            btnReportes.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReportes.ForeColor = Color.Gainsboro;
@@ -186,6 +191,7 @@
             btnNomina.BackColor = Color.Transparent;
             btnNomina.Dock = DockStyle.Top;
             btnNomina.FlatAppearance.BorderSize = 0;
+            btnNomina.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnNomina.FlatStyle = FlatStyle.Flat;
             btnNomina.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNomina.ForeColor = Color.Gainsboro;
@@ -209,6 +215,7 @@
             btnPercepciones.BackColor = Color.Transparent;
             btnPercepciones.Dock = DockStyle.Top;
             btnPercepciones.FlatAppearance.BorderSize = 0;
+            btnPercepciones.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnPercepciones.FlatStyle = FlatStyle.Flat;
             btnPercepciones.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPercepciones.ForeColor = Color.Gainsboro;
@@ -229,40 +236,51 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(Nomina);
+            panel3.Controls.Add(panel4);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 757);
+            panel3.Location = new Point(0, 810);
             panel3.Name = "panel3";
-            panel3.Size = new Size(220, 125);
+            panel3.Size = new Size(220, 72);
             panel3.TabIndex = 35;
             // 
-            // Nomina
+            // panel4
             // 
-            Nomina.BackColor = Color.Transparent;
-            Nomina.Dock = DockStyle.Top;
-            Nomina.FlatAppearance.BorderSize = 0;
-            Nomina.FlatStyle = FlatStyle.Flat;
-            Nomina.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Nomina.ForeColor = Color.Gainsboro;
-            Nomina.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
-            Nomina.IconColor = Color.Gainsboro;
-            Nomina.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            Nomina.ImageAlign = ContentAlignment.MiddleLeft;
-            Nomina.Location = new Point(0, 0);
-            Nomina.Name = "Nomina";
-            Nomina.Padding = new Padding(12, 0, 0, 0);
-            Nomina.Size = new Size(220, 55);
-            Nomina.TabIndex = 30;
-            Nomina.Text = " Nominas";
-            Nomina.TextAlign = ContentAlignment.MiddleLeft;
-            Nomina.TextImageRelation = TextImageRelation.ImageBeforeText;
-            Nomina.UseVisualStyleBackColor = false;
+            panel4.Controls.Add(iconButton3);
+            panel4.Dock = DockStyle.Bottom;
+            panel4.Location = new Point(0, 12);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(220, 60);
+            panel4.TabIndex = 36;
+            // 
+            // iconButton3
+            // 
+            iconButton3.BackColor = Color.Transparent;
+            iconButton3.Dock = DockStyle.Top;
+            iconButton3.FlatAppearance.BorderSize = 0;
+            iconButton3.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
+            iconButton3.FlatStyle = FlatStyle.Flat;
+            iconButton3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            iconButton3.ForeColor = Color.Gainsboro;
+            iconButton3.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            iconButton3.IconColor = Color.Gainsboro;
+            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton3.Location = new Point(0, 0);
+            iconButton3.Name = "iconButton3";
+            iconButton3.Padding = new Padding(12, 0, 0, 0);
+            iconButton3.Size = new Size(220, 55);
+            iconButton3.TabIndex = 46;
+            iconButton3.Text = "Informacion";
+            iconButton3.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton3.UseVisualStyleBackColor = false;
             // 
             // btnAsistencias
             // 
             btnAsistencias.BackColor = Color.Transparent;
             btnAsistencias.Dock = DockStyle.Top;
             btnAsistencias.FlatAppearance.BorderSize = 0;
+            btnAsistencias.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnAsistencias.FlatStyle = FlatStyle.Flat;
             btnAsistencias.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAsistencias.ForeColor = Color.Gainsboro;
@@ -286,6 +304,7 @@
             btnContratos.BackColor = Color.Transparent;
             btnContratos.Dock = DockStyle.Top;
             btnContratos.FlatAppearance.BorderSize = 0;
+            btnContratos.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnContratos.FlatStyle = FlatStyle.Flat;
             btnContratos.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnContratos.ForeColor = Color.Gainsboro;
@@ -307,8 +326,10 @@
             // btnEmpleados
             // 
             btnEmpleados.BackColor = Color.Transparent;
+            btnEmpleados.BackgroundImageLayout = ImageLayout.None;
             btnEmpleados.Dock = DockStyle.Top;
             btnEmpleados.FlatAppearance.BorderSize = 0;
+            btnEmpleados.FlatAppearance.MouseOverBackColor = SystemColors.ActiveBorder;
             btnEmpleados.FlatStyle = FlatStyle.Flat;
             btnEmpleados.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEmpleados.ForeColor = Color.Gainsboro;
@@ -342,59 +363,62 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(iconButton2);
-            panel2.Controls.Add(iconButton1);
-            panel2.Controls.Add(btnmin);
+            panel2.Controls.Add(btnClose);
+            panel2.Controls.Add(btnMax);
+            panel2.Controls.Add(btnMin);
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(838, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(124, 80);
             panel2.TabIndex = 3;
             // 
-            // iconButton2
+            // btnClose
             // 
-            iconButton2.FlatAppearance.BorderSize = 0;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = SystemColors.ControlLightLight;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            iconButton2.IconColor = SystemColors.ControlLightLight;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 30;
-            iconButton2.Location = new Point(95, 0);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(26, 37);
-            iconButton2.TabIndex = 4;
-            iconButton2.UseVisualStyleBackColor = true;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = SystemColors.ControlLightLight;
+            btnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnClose.IconColor = SystemColors.ControlLightLight;
+            btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnClose.IconSize = 33;
+            btnClose.Location = new Point(95, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(26, 37);
+            btnClose.TabIndex = 4;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
-            // iconButton1
+            // btnMax
             // 
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = SystemColors.ControlLightLight;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            iconButton1.IconColor = SystemColors.ControlLightLight;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 30;
-            iconButton1.Location = new Point(63, 0);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(26, 37);
-            iconButton1.TabIndex = 3;
-            iconButton1.UseVisualStyleBackColor = true;
+            btnMax.FlatAppearance.BorderSize = 0;
+            btnMax.FlatStyle = FlatStyle.Flat;
+            btnMax.ForeColor = SystemColors.ControlLightLight;
+            btnMax.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnMax.IconColor = SystemColors.ControlLightLight;
+            btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMax.IconSize = 33;
+            btnMax.Location = new Point(63, 0);
+            btnMax.Name = "btnMax";
+            btnMax.Size = new Size(26, 37);
+            btnMax.TabIndex = 3;
+            btnMax.UseVisualStyleBackColor = true;
+            btnMax.Click += btnMax_Click;
             // 
-            // btnmin
+            // btnMin
             // 
-            btnmin.FlatAppearance.BorderSize = 0;
-            btnmin.FlatStyle = FlatStyle.Flat;
-            btnmin.ForeColor = SystemColors.ControlLightLight;
-            btnmin.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            btnmin.IconColor = SystemColors.ControlLightLight;
-            btnmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnmin.IconSize = 30;
-            btnmin.Location = new Point(31, 0);
-            btnmin.Name = "btnmin";
-            btnmin.Size = new Size(26, 37);
-            btnmin.TabIndex = 2;
-            btnmin.UseVisualStyleBackColor = true;
+            btnMin.FlatAppearance.BorderSize = 0;
+            btnMin.FlatStyle = FlatStyle.Flat;
+            btnMin.ForeColor = SystemColors.ControlLightLight;
+            btnMin.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnMin.IconColor = SystemColors.ControlLightLight;
+            btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMin.IconSize = 33;
+            btnMin.Location = new Point(31, 0);
+            btnMin.Name = "btnMin";
+            btnMin.Size = new Size(26, 37);
+            btnMin.TabIndex = 2;
+            btnMin.UseVisualStyleBackColor = true;
+            btnMin.Click += btnMin_Click;
             // 
             // panel1
             // 
@@ -418,6 +442,7 @@
             btnSalir.Size = new Size(62, 55);
             btnSalir.TabIndex = 0;
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // labelTitulo
             // 
@@ -434,7 +459,7 @@
             // panelEscritorio
             // 
             panelEscritorio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelEscritorio.BackColor = Color.Gainsboro;
+            panelEscritorio.BackColor = Color.DimGray;
             panelEscritorio.Controls.Add(pictureBox1);
             panelEscritorio.ForeColor = Color.Black;
             panelEscritorio.Location = new Point(220, 80);
@@ -464,6 +489,7 @@
             Controls.Add(panelEscritorio);
             Controls.Add(panelLogo2);
             Controls.Add(panelMenu);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Main";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -471,6 +497,7 @@
             panelLogo.PerformLayout();
             panelMenu.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
             panelLogo2.ResumeLayout(false);
             panelLogo2.PerformLayout();
             panel2.ResumeLayout(false);
@@ -493,17 +520,18 @@
         private Panel panelEscritorio;
         private Panel panel1;
         private FontAwesome.Sharp.IconButton btnSalir;
-        private FontAwesome.Sharp.IconButton btnmin;
+        private FontAwesome.Sharp.IconButton btnMin;
         private Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconButton btnMax;
         private PictureBox pictureBox1;
         private Panel panel3;
-        private FontAwesome.Sharp.IconButton Nomina;
         private FontAwesome.Sharp.IconButton btnVacaciones;
         private FontAwesome.Sharp.IconButton bntPuestos;
         private FontAwesome.Sharp.IconButton btnReportes;
         private FontAwesome.Sharp.IconButton btnNomina;
         private FontAwesome.Sharp.IconButton btnPercepciones;
+        private Panel panel4;
+        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }

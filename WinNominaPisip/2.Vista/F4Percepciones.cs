@@ -64,7 +64,7 @@ namespace WinNominaPisip._2.Vista
             {
                 if (control is IconButton btn)
                 {
-                    btn.BackColor = ThemeColor.SecondaryColor;
+                    btn.BackColor = ThemeColor.PrimaryColor;//SecondaryColor;
                     btn.ForeColor = Color.White;
                     btn.IconColor = Color.White;
                     btn.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
@@ -96,6 +96,11 @@ namespace WinNominaPisip._2.Vista
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -84,7 +84,7 @@
             // 
             btnBuscar.Anchor = AnchorStyles.Right;
             btnBuscar.BackColor = Color.Transparent;
-            btnBuscar.FlatAppearance.BorderSize = 2;
+            btnBuscar.FlatAppearance.BorderSize = 0;
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.Font = new Font("Microsoft Sans Serif", 9F);
             btnBuscar.ForeColor = Color.WhiteSmoke;
@@ -93,11 +93,11 @@
             btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBuscar.IconSize = 35;
             btnBuscar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscar.Location = new Point(790, 12);
+            btnBuscar.Location = new Point(796, 11);
             btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Padding = new Padding(15, 0, 0, 0);
-            btnBuscar.Size = new Size(180, 48);
+            btnBuscar.Size = new Size(161, 47);
             btnBuscar.TabIndex = 84;
             btnBuscar.Text = "Buscar";
             btnBuscar.TextAlign = ContentAlignment.MiddleLeft;
@@ -109,7 +109,7 @@
             // 
             iconButton3.Anchor = AnchorStyles.Right;
             iconButton3.BackColor = Color.Transparent;
-            iconButton3.FlatAppearance.BorderSize = 2;
+            iconButton3.FlatAppearance.BorderSize = 0;
             iconButton3.FlatStyle = FlatStyle.Flat;
             iconButton3.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton3.ForeColor = Color.WhiteSmoke;
@@ -118,11 +118,11 @@
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 35;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(790, 166);
+            iconButton3.Location = new Point(796, 164);
             iconButton3.Margin = new Padding(3, 2, 3, 2);
             iconButton3.Name = "iconButton3";
             iconButton3.Padding = new Padding(15, 0, 0, 0);
-            iconButton3.Size = new Size(180, 46);
+            iconButton3.Size = new Size(161, 48);
             iconButton3.TabIndex = 72;
             iconButton3.Text = "Eliminar";
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@
             // 
             iconButton2.Anchor = AnchorStyles.Right;
             iconButton2.BackColor = Color.Transparent;
-            iconButton2.FlatAppearance.BorderSize = 2;
+            iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton2.ForeColor = Color.WhiteSmoke;
@@ -143,11 +143,11 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 35;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(790, 116);
+            iconButton2.Location = new Point(796, 114);
             iconButton2.Margin = new Padding(3, 2, 3, 2);
             iconButton2.Name = "iconButton2";
             iconButton2.Padding = new Padding(15, 0, 0, 0);
-            iconButton2.Size = new Size(180, 46);
+            iconButton2.Size = new Size(161, 46);
             iconButton2.TabIndex = 71;
             iconButton2.Text = "Actualizar";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
@@ -159,7 +159,7 @@
             // 
             iconButton1.Anchor = AnchorStyles.Right;
             iconButton1.BackColor = Color.Transparent;
-            iconButton1.FlatAppearance.BorderSize = 2;
+            iconButton1.FlatAppearance.BorderSize = 0;
             iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton1.ForeColor = Color.WhiteSmoke;
@@ -168,11 +168,11 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 35;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(790, 64);
+            iconButton1.Location = new Point(796, 62);
             iconButton1.Margin = new Padding(3, 2, 3, 2);
             iconButton1.Name = "iconButton1";
             iconButton1.Padding = new Padding(15, 0, 0, 0);
-            iconButton1.Size = new Size(180, 48);
+            iconButton1.Size = new Size(161, 48);
             iconButton1.TabIndex = 70;
             iconButton1.Text = "Agregar";
             iconButton1.TextAlign = ContentAlignment.MiddleLeft;
@@ -183,13 +183,13 @@
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.Gainsboro;
+            dataGridView1.BackgroundColor = Color.DimGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(-9, 228);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1003, 267);
+            dataGridView1.Size = new Size(975, 253);
             dataGridView1.TabIndex = 48;
             // 
             // textBox3
@@ -392,7 +392,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Gainsboro;
+            panel1.BackColor = Color.DarkGray;
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(tableLayoutPanel2);
             panel1.Controls.Add(iconButton2);
@@ -402,7 +402,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(984, 224);
+            panel1.Size = new Size(966, 224);
             panel1.TabIndex = 85;
             // 
             // tableLayoutPanel2
@@ -433,6 +433,7 @@
             tableLayoutPanel2.Controls.Add(comboBox2, 3, 2);
             tableLayoutPanel2.Controls.Add(dateTimePicker1, 1, 3);
             tableLayoutPanel2.Controls.Add(dateTimePicker2, 3, 3);
+            tableLayoutPanel2.Font = new Font("Microsoft Sans Serif", 9F);
             tableLayoutPanel2.Location = new Point(12, 11);
             tableLayoutPanel2.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -442,62 +443,62 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.Size = new Size(738, 204);
+            tableLayoutPanel2.Size = new Size(706, 201);
             tableLayoutPanel2.TabIndex = 86;
             // 
             // textBox19
             // 
-            textBox19.Anchor = AnchorStyles.None;
-            textBox19.Location = new Point(518, 171);
+            textBox19.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox19.Location = new Point(460, 168);
             textBox19.Margin = new Padding(3, 2, 3, 2);
             textBox19.Name = "textBox19";
-            textBox19.Size = new Size(180, 22);
+            textBox19.Size = new Size(243, 24);
             textBox19.TabIndex = 19;
             // 
             // textBox14
             // 
-            textBox14.Anchor = AnchorStyles.None;
-            textBox14.Location = new Point(150, 89);
+            textBox14.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox14.Location = new Point(108, 88);
             textBox14.Margin = new Padding(3, 2, 3, 2);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(178, 22);
+            textBox14.Size = new Size(241, 24);
             textBox14.TabIndex = 14;
             // 
             // textBox13
             // 
-            textBox13.Anchor = AnchorStyles.None;
-            textBox13.Location = new Point(518, 49);
+            textBox13.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox13.Location = new Point(460, 48);
             textBox13.Margin = new Padding(3, 2, 3, 2);
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(180, 22);
+            textBox13.Size = new Size(243, 24);
             textBox13.TabIndex = 13;
             // 
             // textBox9
             // 
-            textBox9.Anchor = AnchorStyles.None;
-            textBox9.Location = new Point(150, 49);
+            textBox9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox9.Location = new Point(108, 48);
             textBox9.Margin = new Padding(3, 2, 3, 2);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(178, 22);
+            textBox9.Size = new Size(241, 24);
             textBox9.TabIndex = 12;
             // 
             // textBox8
             // 
-            textBox8.Anchor = AnchorStyles.None;
-            textBox8.Location = new Point(518, 9);
+            textBox8.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox8.Location = new Point(460, 8);
             textBox8.Margin = new Padding(3, 2, 3, 2);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(180, 22);
+            textBox8.Size = new Size(243, 24);
             textBox8.TabIndex = 11;
             // 
             // label10
             // 
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label10.Location = new Point(10, 12);
+            label10.Font = new Font("Microsoft Sans Serif", 9F);
+            label10.Location = new Point(4, 11);
             label10.Name = "label10";
-            label10.Size = new Size(89, 16);
+            label10.Size = new Size(97, 18);
             label10.TabIndex = 0;
             label10.Text = "ID Empleado:";
             // 
@@ -505,10 +506,10 @@
             // 
             label11.Anchor = AnchorStyles.None;
             label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label11.Location = new Point(25, 52);
+            label11.Font = new Font("Microsoft Sans Serif", 9F);
+            label11.Location = new Point(19, 51);
             label11.Name = "label11";
-            label11.Size = new Size(59, 16);
+            label11.Size = new Size(66, 18);
             label11.TabIndex = 1;
             label11.Text = "Nombre:";
             // 
@@ -516,10 +517,10 @@
             // 
             label12.Anchor = AnchorStyles.None;
             label12.AutoSize = true;
-            label12.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label12.Location = new Point(25, 92);
+            label12.Font = new Font("Microsoft Sans Serif", 9F);
+            label12.Location = new Point(21, 91);
             label12.Name = "label12";
-            label12.Size = new Size(60, 16);
+            label12.Size = new Size(63, 18);
             label12.TabIndex = 2;
             label12.Text = "Apellido:";
             // 
@@ -527,21 +528,21 @@
             // 
             label13.Anchor = AnchorStyles.None;
             label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label13.Location = new Point(9, 132);
+            label13.Font = new Font("Microsoft Sans Serif", 9F);
+            label13.Location = new Point(9, 131);
             label13.Name = "label13";
-            label13.Size = new Size(92, 16);
+            label13.Size = new Size(87, 18);
             label13.TabIndex = 3;
-            label13.Text = "F. Nacimiento:";
+            label13.Text = "Nacimiento:";
             // 
             // label14
             // 
             label14.Anchor = AnchorStyles.None;
             label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label14.Location = new Point(27, 174);
+            label14.Font = new Font("Microsoft Sans Serif", 9F);
+            label14.Location = new Point(21, 171);
             label14.Name = "label14";
-            label14.Size = new Size(55, 16);
+            label14.Size = new Size(62, 18);
             label14.TabIndex = 4;
             label14.Text = "Genero:";
             // 
@@ -549,10 +550,10 @@
             // 
             label15.Anchor = AnchorStyles.None;
             label15.AutoSize = true;
-            label15.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label15.Location = new Point(396, 12);
+            label15.Font = new Font("Microsoft Sans Serif", 9F);
+            label15.Location = new Point(375, 11);
             label15.Name = "label15";
-            label15.Size = new Size(53, 16);
+            label15.Size = new Size(58, 18);
             label15.TabIndex = 5;
             label15.Text = "Cedula:";
             // 
@@ -560,30 +561,30 @@
             // 
             label19.Anchor = AnchorStyles.None;
             label19.AutoSize = true;
-            label19.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label19.Location = new Point(396, 174);
+            label19.Font = new Font("Microsoft Sans Serif", 9F);
+            label19.Location = new Point(375, 171);
             label19.Name = "label19";
-            label19.Size = new Size(53, 16);
+            label19.Size = new Size(59, 18);
             label19.TabIndex = 9;
             label19.Text = "Estado:";
             // 
             // textBox7
             // 
-            textBox7.Anchor = AnchorStyles.None;
-            textBox7.Location = new Point(150, 9);
+            textBox7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox7.Location = new Point(108, 8);
             textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(178, 22);
+            textBox7.Size = new Size(241, 24);
             textBox7.TabIndex = 10;
             // 
             // label17
             // 
             label17.Anchor = AnchorStyles.None;
             label17.AutoSize = true;
-            label17.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label17.Location = new Point(388, 132);
+            label17.Font = new Font("Microsoft Sans Serif", 9F);
+            label17.Location = new Point(365, 131);
             label17.Name = "label17";
-            label17.Size = new Size(69, 16);
+            label17.Size = new Size(78, 18);
             label17.TabIndex = 7;
             label17.Text = "F. ingreso:";
             // 
@@ -591,10 +592,10 @@
             // 
             label16.Anchor = AnchorStyles.None;
             label16.AutoSize = true;
-            label16.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label16.Location = new Point(397, 92);
+            label16.Font = new Font("Microsoft Sans Serif", 9F);
+            label16.Location = new Point(375, 91);
             label16.Name = "label16";
-            label16.Size = new Size(52, 16);
+            label16.Size = new Size(59, 18);
             label16.TabIndex = 6;
             label16.Text = "Puesto:";
             // 
@@ -602,52 +603,52 @@
             // 
             label20.Anchor = AnchorStyles.None;
             label20.AutoSize = true;
-            label20.Font = new Font("Microsoft Sans Serif", 7.8F);
-            label20.Location = new Point(397, 52);
+            label20.Font = new Font("Microsoft Sans Serif", 9F);
+            label20.Location = new Point(375, 51);
             label20.Name = "label20";
-            label20.Size = new Size(51, 16);
+            label20.Size = new Size(59, 18);
             label20.TabIndex = 20;
             label20.Text = "Correo:";
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.None;
+            comboBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(150, 168);
+            comboBox1.Location = new Point(108, 166);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(178, 24);
+            comboBox1.Size = new Size(241, 26);
             comboBox1.TabIndex = 21;
             // 
             // comboBox2
             // 
-            comboBox2.Anchor = AnchorStyles.None;
+            comboBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(518, 86);
+            comboBox2.Location = new Point(460, 86);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(180, 24);
+            comboBox2.Size = new Size(243, 26);
             comboBox2.TabIndex = 22;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Anchor = AnchorStyles.None;
-            dateTimePicker1.Location = new Point(150, 129);
+            dateTimePicker1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dateTimePicker1.Location = new Point(108, 128);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(178, 22);
+            dateTimePicker1.Size = new Size(241, 24);
             dateTimePicker1.TabIndex = 23;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Anchor = AnchorStyles.None;
-            dateTimePicker2.Location = new Point(518, 129);
+            dateTimePicker2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dateTimePicker2.Location = new Point(460, 128);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(180, 22);
+            dateTimePicker2.Size = new Size(243, 24);
             dateTimePicker2.TabIndex = 24;
             // 
             // F1Empleados
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 483);
+            ClientSize = new Size(966, 483);
             ControlBox = false;
             Controls.Add(panel1);
             Controls.Add(dataGridView1);

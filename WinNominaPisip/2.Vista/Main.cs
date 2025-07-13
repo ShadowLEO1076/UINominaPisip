@@ -23,7 +23,7 @@ namespace WinNominaPisip._2.Vista
         private IconButton currentButton;
         private Random random;
         private int tempIndex;
-        private Form activeForm;
+        private Form? activeForm;
 
         // DLL para mover la ventana
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -119,7 +119,7 @@ namespace WinNominaPisip._2.Vista
         }
 
 
-   
+
 
         private void btnAsistencias_Click(object sender, EventArgs e)
         {
@@ -128,7 +128,7 @@ namespace WinNominaPisip._2.Vista
             labelTitulo.Text = "Gestion Asistencias ";
         }
 
-      
+
         private void btnNomina_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
@@ -139,7 +139,7 @@ namespace WinNominaPisip._2.Vista
 
 
 
-      
+
 
         private void btnReportes_Click_1(object sender, EventArgs e)
         {
@@ -156,9 +156,9 @@ namespace WinNominaPisip._2.Vista
 
         }
 
-        
 
-        
+
+
 
         private void bntPuestos_Click_1(object sender, EventArgs e)
         {
@@ -173,6 +173,48 @@ namespace WinNominaPisip._2.Vista
             ActivateButton(sender);
             OpenChildForm(new _2.Vista.F6Vacaciones(currentButton.BackColor), sender);
             labelTitulo.Text = "Gestion Vacaciones";
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // la funcion es para cerrar los formularios hijos y volver al formulario principal
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null;
+            }
+
+
+        }
+
+
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            // Cierra la aplicación
+            Application.Exit();
+
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            // Cambia el estado de maximización del formulario
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            // Minimiza el formulario
+            this.WindowState = FormWindowState.Minimized;
 
         }
     }
