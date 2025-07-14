@@ -75,10 +75,12 @@ namespace WinNominaPisip._2.Vista
                     btn.ForeColor = Color.White;
                     btn.IconColor = Color.White;
                     btn.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+                    flowLayoutPanel4.BackColor = ThemeColor.PrimaryColor; /// panel de botones algo nuevo mucho ojooooo
+                    panel1.BackColor = ThemeColor.SecondaryColor;
                 }
                 else if (control is Label lbl)
                 {
-                    lbl.ForeColor = Color.Black;
+                    lbl.ForeColor = Color.White;
                 }
                 else if (control.HasChildren)
                 {
@@ -125,5 +127,13 @@ namespace WinNominaPisip._2.Vista
         {
             throw new NotImplementedException();
         }
+
+        private void textBox8_TextChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }

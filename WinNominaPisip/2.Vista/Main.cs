@@ -59,13 +59,12 @@ namespace WinNominaPisip._2.Vista
                     currentButton.Font = new Font("Microsoft Sans Serif", 12.5F, FontStyle.Regular);
 
                     panelMenu.BackColor = color;
-                    panel1.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2);
-                    panel2.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2);
-                    panelMenu.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    panelMenu.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2);
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     panelLogo2.BackColor = ThemeColor.SecondaryColor;
                     panelLogo2.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2);
+                    
                 }
             }
         }

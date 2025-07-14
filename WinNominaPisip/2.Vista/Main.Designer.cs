@@ -44,29 +44,23 @@
             btnInfo = new FontAwesome.Sharp.IconButton();
             panelLogo2 = new Panel();
             panel4 = new Panel();
-            btnClose = new FontAwesome.Sharp.IconButton();
-            btnMax = new FontAwesome.Sharp.IconButton();
-            btnMin = new FontAwesome.Sharp.IconButton();
             panel5 = new Panel();
             btnSalir = new FontAwesome.Sharp.IconButton();
             labelTitulo = new Label();
-            panelEscritorio = new Panel();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            panel1 = new Panel();
             timeSlideBar = new System.Windows.Forms.Timer(components);
+            pictureBox1 = new PictureBox();
+            panelEscritorio = new Panel();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             panelLogo2.SuspendLayout();
-            panel4.SuspendLayout();
             panel5.SuspendLayout();
-            panelEscritorio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelEscritorio.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = SystemColors.HotTrack;
+            panelMenu.BackColor = SystemColors.Desktop;
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Controls.Add(bntPuestos);
             panelMenu.Controls.Add(btnEmpleados);
@@ -127,7 +121,8 @@
             bntPuestos.IconColor = Color.Gainsboro;
             bntPuestos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             bntPuestos.ImageAlign = ContentAlignment.MiddleLeft;
-            bntPuestos.Location = new Point(3, 83);
+            bntPuestos.Location = new Point(0, 80);
+            bntPuestos.Margin = new Padding(0);
             bntPuestos.Name = "bntPuestos";
             bntPuestos.Padding = new Padding(12, 0, 0, 0);
             bntPuestos.Size = new Size(220, 60);
@@ -152,7 +147,7 @@
             btnEmpleados.IconColor = Color.Gainsboro;
             btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnEmpleados.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEmpleados.Location = new Point(0, 146);
+            btnEmpleados.Location = new Point(0, 140);
             btnEmpleados.Margin = new Padding(0);
             btnEmpleados.Name = "btnEmpleados";
             btnEmpleados.Padding = new Padding(12, 0, 0, 0);
@@ -177,7 +172,7 @@
             btnContratos.IconColor = Color.Gainsboro;
             btnContratos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnContratos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnContratos.Location = new Point(3, 209);
+            btnContratos.Location = new Point(3, 203);
             btnContratos.Name = "btnContratos";
             btnContratos.Padding = new Padding(12, 0, 0, 0);
             btnContratos.Size = new Size(220, 60);
@@ -201,7 +196,7 @@
             btnAsistencias.IconColor = Color.Gainsboro;
             btnAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAsistencias.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAsistencias.Location = new Point(3, 275);
+            btnAsistencias.Location = new Point(3, 269);
             btnAsistencias.Name = "btnAsistencias";
             btnAsistencias.Padding = new Padding(12, 0, 0, 0);
             btnAsistencias.Size = new Size(220, 60);
@@ -225,7 +220,7 @@
             btnPercepciones.IconColor = Color.Gainsboro;
             btnPercepciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnPercepciones.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPercepciones.Location = new Point(3, 341);
+            btnPercepciones.Location = new Point(3, 335);
             btnPercepciones.Name = "btnPercepciones";
             btnPercepciones.Padding = new Padding(12, 0, 0, 0);
             btnPercepciones.Size = new Size(220, 60);
@@ -249,7 +244,7 @@
             btnNomina.IconColor = Color.Gainsboro;
             btnNomina.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnNomina.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNomina.Location = new Point(3, 407);
+            btnNomina.Location = new Point(3, 401);
             btnNomina.Name = "btnNomina";
             btnNomina.Padding = new Padding(12, 0, 0, 0);
             btnNomina.Size = new Size(220, 60);
@@ -273,7 +268,7 @@
             btnReportes.IconColor = Color.Gainsboro;
             btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReportes.Location = new Point(3, 473);
+            btnReportes.Location = new Point(3, 467);
             btnReportes.Name = "btnReportes";
             btnReportes.Padding = new Padding(12, 0, 0, 0);
             btnReportes.Size = new Size(220, 60);
@@ -297,7 +292,7 @@
             btnVacaciones.IconColor = Color.Gainsboro;
             btnVacaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVacaciones.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVacaciones.Location = new Point(3, 539);
+            btnVacaciones.Location = new Point(3, 533);
             btnVacaciones.Name = "btnVacaciones";
             btnVacaciones.Padding = new Padding(12, 0, 0, 0);
             btnVacaciones.Size = new Size(220, 60);
@@ -321,7 +316,7 @@
             btnInfo.IconColor = Color.Gainsboro;
             btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnInfo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInfo.Location = new Point(3, 605);
+            btnInfo.Location = new Point(3, 599);
             btnInfo.Name = "btnInfo";
             btnInfo.Padding = new Padding(12, 0, 0, 0);
             btnInfo.Size = new Size(220, 60);
@@ -333,74 +328,23 @@
             // 
             // panelLogo2
             // 
-            panelLogo2.BackColor = SystemColors.HotTrack;
+            panelLogo2.BackColor = SystemColors.Desktop;
             panelLogo2.Controls.Add(panel4);
             panelLogo2.Controls.Add(panel5);
             panelLogo2.Controls.Add(labelTitulo);
             panelLogo2.Dock = DockStyle.Top;
             panelLogo2.Location = new Point(220, 0);
             panelLogo2.Name = "panelLogo2";
-            panelLogo2.Size = new Size(967, 80);
+            panelLogo2.Size = new Size(967, 81);
             panelLogo2.TabIndex = 25;
             // 
             // panel4
             // 
-            panel4.Controls.Add(btnClose);
-            panel4.Controls.Add(btnMax);
-            panel4.Controls.Add(btnMin);
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(843, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(124, 80);
+            panel4.Size = new Size(124, 81);
             panel4.TabIndex = 3;
-            // 
-            // btnClose
-            // 
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.ForeColor = SystemColors.ControlLightLight;
-            btnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            btnClose.IconColor = SystemColors.ControlLightLight;
-            btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnClose.IconSize = 33;
-            btnClose.Location = new Point(95, 0);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(26, 37);
-            btnClose.TabIndex = 4;
-            btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += btnClose_Click_1;
-            // 
-            // btnMax
-            // 
-            btnMax.FlatAppearance.BorderSize = 0;
-            btnMax.FlatStyle = FlatStyle.Flat;
-            btnMax.ForeColor = SystemColors.ControlLightLight;
-            btnMax.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            btnMax.IconColor = SystemColors.ControlLightLight;
-            btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnMax.IconSize = 33;
-            btnMax.Location = new Point(63, 0);
-            btnMax.Name = "btnMax";
-            btnMax.Size = new Size(26, 37);
-            btnMax.TabIndex = 3;
-            btnMax.UseVisualStyleBackColor = true;
-            btnMax.Click += btnMax_Click_1;
-            // 
-            // btnMin
-            // 
-            btnMin.FlatAppearance.BorderSize = 0;
-            btnMin.FlatStyle = FlatStyle.Flat;
-            btnMin.ForeColor = SystemColors.ControlLightLight;
-            btnMin.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            btnMin.IconColor = SystemColors.ControlLightLight;
-            btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnMin.IconSize = 33;
-            btnMin.Location = new Point(31, 0);
-            btnMin.Name = "btnMin";
-            btnMin.Size = new Size(26, 37);
-            btnMin.TabIndex = 2;
-            btnMin.UseVisualStyleBackColor = true;
-            btnMin.Click += btnMin_Click_1;
             // 
             // panel5
             // 
@@ -408,7 +352,7 @@
             panel5.Dock = DockStyle.Left;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(71, 80);
+            panel5.Size = new Size(71, 81);
             panel5.TabIndex = 1;
             // 
             // btnSalir
@@ -438,51 +382,32 @@
             labelTitulo.TabIndex = 0;
             labelTitulo.Text = "HOME S.NOMINA";
             // 
-            // panelEscritorio
+            // timeSlideBar
             // 
-            panelEscritorio.BackColor = Color.DimGray;
-            panelEscritorio.Controls.Add(panel2);
-            panelEscritorio.Controls.Add(pictureBox1);
-            panelEscritorio.Dock = DockStyle.Fill;
-            panelEscritorio.ForeColor = Color.Black;
-            panelEscritorio.Location = new Point(220, 80);
-            panelEscritorio.Name = "panelEscritorio";
-            panelEscritorio.Size = new Size(967, 704);
-            panelEscritorio.TabIndex = 26;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.HotTrack;
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(947, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(20, 704);
-            panel2.TabIndex = 49;
+            timeSlideBar.Tick += btnMenu_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(195, 77);
+            pictureBox1.Location = new Point(210, 108);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(567, 507);
+            pictureBox1.Size = new Size(552, 475);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // panel1
+            // panelEscritorio
             // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(220, 764);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(967, 20);
-            panel1.TabIndex = 48;
-            // 
-            // timeSlideBar
-            // 
-            timeSlideBar.Tick += btnMenu_Click;
+            panelEscritorio.BackColor = Color.DimGray;
+            panelEscritorio.Controls.Add(pictureBox1);
+            panelEscritorio.Dock = DockStyle.Fill;
+            panelEscritorio.ForeColor = Color.Black;
+            panelEscritorio.Location = new Point(220, 81);
+            panelEscritorio.Name = "panelEscritorio";
+            panelEscritorio.Size = new Size(967, 703);
+            panelEscritorio.TabIndex = 26;
             // 
             // Main
             // 
@@ -490,12 +415,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1187, 784);
-            ControlBox = false;
-            Controls.Add(panel1);
             Controls.Add(panelEscritorio);
             Controls.Add(panelLogo2);
             Controls.Add(panelMenu);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "Main";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -503,10 +425,9 @@
             panelLogo.ResumeLayout(false);
             panelLogo2.ResumeLayout(false);
             panelLogo2.PerformLayout();
-            panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
-            panelEscritorio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelEscritorio.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -525,17 +446,12 @@
         private FontAwesome.Sharp.IconButton btnVacaciones;
         private Panel panelLogo2;
         private Panel panel4;
-        private FontAwesome.Sharp.IconButton btnClose;
-        private FontAwesome.Sharp.IconButton btnMax;
-        private FontAwesome.Sharp.IconButton btnMin;
         private Panel panel5;
         private FontAwesome.Sharp.IconButton btnSalir;
         private Label labelTitulo;
-        private Panel panelEscritorio;
-        private PictureBox pictureBox1;
-        private Panel panel1;
         private FontAwesome.Sharp.IconButton btnInfo;
-        private Panel panel2;
         private System.Windows.Forms.Timer timeSlideBar;
+        private PictureBox pictureBox1;
+        private Panel panelEscritorio;
     }
 }
