@@ -184,6 +184,7 @@
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.DimGray;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(-9, 228);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
@@ -614,7 +615,7 @@
             // 
             comboBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(108, 166);
+            comboBox1.Location = new Point(108, 167);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(241, 26);
             comboBox1.TabIndex = 21;
@@ -623,7 +624,7 @@
             // 
             comboBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(460, 86);
+            comboBox2.Location = new Point(460, 87);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(243, 26);
             comboBox2.TabIndex = 22;

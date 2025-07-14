@@ -14,6 +14,7 @@ namespace WinNominaPisip._2.Vista
 {
     public partial class Main : Form
     {
+        bool sliderExpand;
         public Main()
         {
             InitializeComponent();
@@ -58,7 +59,9 @@ namespace WinNominaPisip._2.Vista
                     currentButton.Font = new Font("Microsoft Sans Serif", 12.5F, FontStyle.Regular);
 
                     panelMenu.BackColor = color;
-                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    panel1.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2);
+                    panel2.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2);
+                    panelMenu.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     panelLogo2.BackColor = ThemeColor.SecondaryColor;
@@ -103,80 +106,47 @@ namespace WinNominaPisip._2.Vista
 
 
 
-        private void btnEmpleados_Click_1(object sender, EventArgs e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// /////////////////////////////////////////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F1Empleados(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Empleados";
+            if (sliderExpand)
+            {
+                panelMenu.Width = 77;
+                btnMenu.IconChar = IconChar.Bars;
+                sliderExpand = false;
+            }
+            else
+            {
+                panelMenu.Width = 220;
+                btnMenu.IconChar = IconChar.Times;
+                sliderExpand = true;
+            }
         }
-
-        private void btnContratos_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F2Contratos(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Contratos";
-
-        }
-
-
-
-
-        private void btnAsistencias_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F5Asistencias(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Asistencias ";
-        }
-
-
-        private void btnNomina_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F3Nominas(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Nomina";
-
-        }
-
-
-
-
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F8Reportes(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Reportes";
-
-        }
-        private void btnPercepciones_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F4Percepciones(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Percepciones";
-
-        }
-
-
-
-
-
-        private void bntPuestos_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F7Puestos(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Puestos";
-
-        }
-
-        private void btnVacaciones_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new _2.Vista.F6Vacaciones(currentButton.BackColor), sender);
-            labelTitulo.Text = "Gestion Vacaciones";
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             // la funcion es para cerrar los formularios hijos y volver al formulario principal
             if (activeForm != null)
@@ -188,16 +158,14 @@ namespace WinNominaPisip._2.Vista
 
         }
 
-
-
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnMin_Click_1(object sender, EventArgs e)
         {
-            // Cierra la aplicación
-            Application.Exit();
+            // Minimiza el formulario
+            this.WindowState = FormWindowState.Minimized;
 
         }
 
-        private void btnMax_Click(object sender, EventArgs e)
+        private void btnMax_Click_1(object sender, EventArgs e)
         {
             // Cambia el estado de maximización del formulario
             if (this.WindowState == FormWindowState.Maximized)
@@ -211,10 +179,81 @@ namespace WinNominaPisip._2.Vista
 
         }
 
-        private void btnMin_Click(object sender, EventArgs e)
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
-            // Minimiza el formulario
-            this.WindowState = FormWindowState.Minimized;
+            // Cierra la aplicación
+            Application.Exit();
+
+        }
+
+        private void bntPuestos_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F7Puestos(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Puestos";
+
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F1Empleados(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Empleados";
+
+        }
+
+        private void btnContratos_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F2Contratos(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Contratos";
+
+        }
+
+        private void btnAsistencias_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F5Asistencias(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Asistencias ";
+
+        }
+
+        private void btnPercepciones_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F4Percepciones(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Percepciones";
+
+        }
+
+        private void btnNomina_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F3Nominas(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Nomina";
+
+
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F8Reportes(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Reportes";
+
+        }
+
+        private void btnVacaciones_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            OpenChildForm(new _2.Vista.F6Vacaciones(currentButton.BackColor), sender);
+            labelTitulo.Text = "Gestion Vacaciones";
+
+
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
 
         }
     }

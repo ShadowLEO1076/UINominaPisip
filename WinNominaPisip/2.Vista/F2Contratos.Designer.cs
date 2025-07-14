@@ -307,7 +307,7 @@
             btnBuscar.Padding = new Padding(15, 0, 0, 0);
             btnBuscar.Size = new Size(170, 46);
             btnBuscar.TabIndex = 84;
-            btnBuscar.Text = "Buscar";
+            btnBuscar.Text = "Consultar";
             btnBuscar.TextAlign = ContentAlignment.MiddleLeft;
             btnBuscar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBuscar.UseVisualStyleBackColor = false;
@@ -355,7 +355,7 @@
             iconButton1.Padding = new Padding(15, 0, 0, 0);
             iconButton1.Size = new Size(170, 48);
             iconButton1.TabIndex = 70;
-            iconButton1.Text = "Agregar";
+            iconButton1.Text = "Guardar";
             iconButton1.TextAlign = ContentAlignment.MiddleLeft;
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = false;
