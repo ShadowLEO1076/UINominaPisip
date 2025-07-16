@@ -60,7 +60,7 @@
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = SystemColors.Desktop;
+            panelMenu.BackColor = SystemColors.HotTrack;
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Controls.Add(bntPuestos);
             panelMenu.Controls.Add(btnEmpleados);
@@ -328,7 +328,7 @@
             // 
             // panelLogo2
             // 
-            panelLogo2.BackColor = SystemColors.Desktop;
+            panelLogo2.BackColor = SystemColors.HotTrack;
             panelLogo2.Controls.Add(panel4);
             panelLogo2.Controls.Add(panel5);
             panelLogo2.Controls.Add(labelTitulo);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -8,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using Nomina.API.Controllers;
+using NominaPISIB.Infraestructura.AccesoDatos;
 
 
 namespace WinNominaPisip._2.Vista
@@ -16,13 +19,42 @@ namespace WinNominaPisip._2.Vista
     {
         private IconButton currentButton;
         private Color _botonColor;
+        private readonly APINomina _nomminaAPI;
+        private String ApiUrl;
+        
 
         public F1Empleados(Color botonColor)
         {
             _botonColor = botonColor; // guardamos el color del botón activo
             InitializeComponent();
-            this.Load += F1Empleados_Load_1;
+            //ApiUrl = ConfigurationManager.AppSettings["APIBaseUrl"]; // Obtiene la URL de la API desde el archivo de configuración
+            //_nomminaAPI = new APINomina(ApiUrl); // Inicializa la instancia de APINomina con la URL de la API
+            this.Load += F1Empleados_Load_1; // Asocia el evento de carga del formulario
 
+        }
+        /*
+        // EVENTEO PARA CARGAR O LISTAR LOS DATOS DEL EMPLEADO
+        public async Task CargarEmpleados()
+        {
+            try
+            {
+                // Aquí puedes llamar al método de la API para obtener los empleados
+                var empleados = await _nomminaAPI.GetAsync<List<Empleados>>("empleados");
+                dgvEmpleados.DataSource = empleados;
+                dgvEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los empleados: {ex.Message}");
+            }
+        }*/
+        private async Task F1Empleados_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+            //await CargarEmpleados(); // Llama al método para cargar los empleados al iniciar el formulario
+            // Aquí puedes llamar a un método para cargar los datos de los empleados
+            // Por ejemplo: CargarEmpleados();
         }
 
 

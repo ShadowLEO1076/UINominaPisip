@@ -33,7 +33,7 @@
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
-            dataGridView1 = new DataGridView();
+            dgvEmpleados = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             NOMBRE = new DataGridViewTextBoxColumn();
             APELLIDO = new DataGridViewTextBoxColumn();
@@ -65,28 +65,28 @@
             flowLayoutPanel4 = new FlowLayoutPanel();
             textBox15 = new TextBox();
             label14 = new Label();
-            textBox7 = new TextBox();
+            txtNombre = new TextBox();
             label15 = new Label();
-            textBox9 = new TextBox();
+            txtApellido = new TextBox();
             label17 = new Label();
-            textBox13 = new TextBox();
+            txtCedula = new TextBox();
             label18 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateNacimiento = new DateTimePicker();
             label21 = new Label();
-            comboBox2 = new ComboBox();
+            cbxGenero = new ComboBox();
             panel3 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            dateIngreso = new DateTimePicker();
             label11 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox3 = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
-            textBox14 = new TextBox();
+            cbxPuesto = new ComboBox();
+            txtCorreo = new TextBox();
             label12 = new Label();
             label13 = new Label();
             label19 = new Label();
             panel1 = new Panel();
             label10 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtEstado = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
             panel2.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             panel3.SuspendLayout();
@@ -193,20 +193,20 @@
             iconButton1.UseVisualStyleBackColor = false;
             iconButton1.Click += iconButton1_Click;
             // 
-            // dataGridView1
+            // dgvEmpleados
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = SystemColors.ControlDarkDark;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, NOMBRE, APELLIDO, CEDULA, NACIMIENTO, GENERO, PUESTO, FINGRESO, ESTADO });
-            dataGridView1.GridColor = SystemColors.HotTrack;
-            dataGridView1.Location = new Point(0, 373);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1165, 347);
-            dataGridView1.TabIndex = 48;
+            dgvEmpleados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvEmpleados.BackgroundColor = SystemColors.ControlDarkDark;
+            dgvEmpleados.BorderStyle = BorderStyle.None;
+            dgvEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEmpleados.Columns.AddRange(new DataGridViewColumn[] { ID, NOMBRE, APELLIDO, CEDULA, NACIMIENTO, GENERO, PUESTO, FINGRESO, ESTADO });
+            dgvEmpleados.GridColor = SystemColors.HotTrack;
+            dgvEmpleados.Location = new Point(0, 360);
+            dgvEmpleados.Margin = new Padding(3, 2, 3, 2);
+            dgvEmpleados.Name = "dgvEmpleados";
+            dgvEmpleados.RowHeadersWidth = 51;
+            dgvEmpleados.Size = new Size(1170, 207);
+            dgvEmpleados.TabIndex = 48;
             // 
             // ID
             // 
@@ -482,7 +482,7 @@
             flowLayoutPanel4.Controls.Add(iconButton2);
             flowLayoutPanel4.Controls.Add(iconButton3);
             flowLayoutPanel4.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel4.Location = new Point(923, -1);
+            flowLayoutPanel4.Location = new Point(928, -1);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
             flowLayoutPanel4.Size = new Size(240, 295);
             flowLayoutPanel4.TabIndex = 90;
@@ -507,14 +507,14 @@
             label14.TabIndex = 25;
             label14.Text = "Nombre:";
             // 
-            // textBox7
+            // txtNombre
             // 
-            textBox7.Anchor = AnchorStyles.Left;
-            textBox7.Location = new Point(127, 12);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(274, 22);
-            textBox7.TabIndex = 32;
+            txtNombre.Anchor = AnchorStyles.Left;
+            txtNombre.Location = new Point(127, 12);
+            txtNombre.Margin = new Padding(3, 2, 3, 2);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(274, 22);
+            txtNombre.TabIndex = 32;
             // 
             // label15
             // 
@@ -527,14 +527,14 @@
             label15.TabIndex = 26;
             label15.Text = "Apellido:";
             // 
-            // textBox9
+            // txtApellido
             // 
-            textBox9.Anchor = AnchorStyles.Left;
-            textBox9.Location = new Point(127, 59);
-            textBox9.Margin = new Padding(3, 2, 3, 2);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(274, 22);
-            textBox9.TabIndex = 30;
+            txtApellido.Anchor = AnchorStyles.Left;
+            txtApellido.Location = new Point(127, 59);
+            txtApellido.Margin = new Padding(3, 2, 3, 2);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(274, 22);
+            txtApellido.TabIndex = 30;
             // 
             // label17
             // 
@@ -547,14 +547,14 @@
             label17.TabIndex = 29;
             label17.Text = "Cedula:";
             // 
-            // textBox13
+            // txtCedula
             // 
-            textBox13.Anchor = AnchorStyles.Left;
-            textBox13.Location = new Point(127, 106);
-            textBox13.Margin = new Padding(3, 2, 3, 2);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(274, 22);
-            textBox13.TabIndex = 31;
+            txtCedula.Anchor = AnchorStyles.Left;
+            txtCedula.Location = new Point(127, 106);
+            txtCedula.Margin = new Padding(3, 2, 3, 2);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(274, 22);
+            txtCedula.TabIndex = 31;
             // 
             // label18
             // 
@@ -567,13 +567,15 @@
             label18.TabIndex = 27;
             label18.Text = "Nacimiento:";
             // 
-            // dateTimePicker1
+            // dateNacimiento
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Left;
-            dateTimePicker1.Location = new Point(127, 153);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(276, 22);
-            dateTimePicker1.TabIndex = 34;
+            dateNacimiento.Anchor = AnchorStyles.Left;
+            dateNacimiento.CustomFormat = "yyyy/MM/dd";
+            dateNacimiento.Format = DateTimePickerFormat.Custom;
+            dateNacimiento.Location = new Point(127, 153);
+            dateNacimiento.Name = "dateNacimiento";
+            dateNacimiento.Size = new Size(276, 22);
+            dateNacimiento.TabIndex = 34;
             // 
             // label21
             // 
@@ -586,14 +588,14 @@
             label21.TabIndex = 28;
             label21.Text = "Genero:";
             // 
-            // comboBox2
+            // cbxGenero
             // 
-            comboBox2.Anchor = AnchorStyles.Left;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(127, 199);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(274, 24);
-            comboBox2.TabIndex = 33;
+            cbxGenero.Anchor = AnchorStyles.Left;
+            cbxGenero.FormattingEnabled = true;
+            cbxGenero.Location = new Point(127, 199);
+            cbxGenero.Name = "cbxGenero";
+            cbxGenero.Size = new Size(274, 24);
+            cbxGenero.TabIndex = 33;
             // 
             // panel3
             // 
@@ -604,7 +606,7 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1165, 294);
+            panel3.Size = new Size(1170, 294);
             panel3.TabIndex = 93;
             // 
             // tableLayoutPanel1
@@ -615,11 +617,11 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
+            tableLayoutPanel1.Controls.Add(txtEstado, 3, 3);
+            tableLayoutPanel1.Controls.Add(dateIngreso, 3, 2);
             tableLayoutPanel1.Controls.Add(label11, 2, 0);
-            tableLayoutPanel1.Controls.Add(comboBox1, 3, 0);
-            tableLayoutPanel1.Controls.Add(comboBox3, 3, 3);
-            tableLayoutPanel1.Controls.Add(dateTimePicker2, 3, 2);
-            tableLayoutPanel1.Controls.Add(textBox14, 3, 1);
+            tableLayoutPanel1.Controls.Add(cbxPuesto, 3, 0);
+            tableLayoutPanel1.Controls.Add(txtCorreo, 3, 1);
             tableLayoutPanel1.Controls.Add(label14, 0, 0);
             tableLayoutPanel1.Controls.Add(label15, 0, 1);
             tableLayoutPanel1.Controls.Add(label12, 2, 1);
@@ -628,12 +630,12 @@
             tableLayoutPanel1.Controls.Add(label17, 0, 2);
             tableLayoutPanel1.Controls.Add(label18, 0, 3);
             tableLayoutPanel1.Controls.Add(label21, 0, 4);
-            tableLayoutPanel1.Controls.Add(textBox7, 1, 0);
-            tableLayoutPanel1.Controls.Add(textBox9, 1, 1);
-            tableLayoutPanel1.Controls.Add(textBox13, 1, 2);
-            tableLayoutPanel1.Controls.Add(dateTimePicker1, 1, 3);
-            tableLayoutPanel1.Controls.Add(comboBox2, 1, 4);
-            tableLayoutPanel1.Location = new Point(32, 29);
+            tableLayoutPanel1.Controls.Add(txtNombre, 1, 0);
+            tableLayoutPanel1.Controls.Add(txtApellido, 1, 1);
+            tableLayoutPanel1.Controls.Add(txtCedula, 1, 2);
+            tableLayoutPanel1.Controls.Add(dateNacimiento, 1, 3);
+            tableLayoutPanel1.Controls.Add(cbxGenero, 1, 4);
+            tableLayoutPanel1.Location = new Point(53, 25);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
@@ -641,61 +643,54 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Size = new Size(828, 239);
+            tableLayoutPanel1.Size = new Size(833, 239);
             tableLayoutPanel1.TabIndex = 91;
+            // 
+            // dateIngreso
+            // 
+            dateIngreso.Anchor = AnchorStyles.Left;
+            dateIngreso.CustomFormat = "yyyy/MM/dd";
+            dateIngreso.Format = DateTimePickerFormat.Custom;
+            dateIngreso.Location = new Point(542, 106);
+            dateIngreso.Name = "dateIngreso";
+            dateIngreso.Size = new Size(276, 22);
+            dateIngreso.TabIndex = 98;
             // 
             // label11
             // 
             label11.Anchor = AnchorStyles.Left;
             label11.AutoSize = true;
             label11.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label11.Location = new Point(416, 13);
+            label11.Location = new Point(418, 13);
             label11.Name = "label11";
             label11.Size = new Size(66, 20);
             label11.TabIndex = 91;
             label11.Text = "Puesto:";
             // 
-            // comboBox1
+            // cbxPuesto
             // 
-            comboBox1.Anchor = AnchorStyles.Left;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(540, 9);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(274, 24);
-            comboBox1.TabIndex = 96;
+            cbxPuesto.Anchor = AnchorStyles.Left;
+            cbxPuesto.FormattingEnabled = true;
+            cbxPuesto.Location = new Point(542, 9);
+            cbxPuesto.Name = "cbxPuesto";
+            cbxPuesto.Size = new Size(274, 24);
+            cbxPuesto.TabIndex = 96;
             // 
-            // comboBox3
+            // txtCorreo
             // 
-            comboBox3.Anchor = AnchorStyles.Left;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(540, 150);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(274, 24);
-            comboBox3.TabIndex = 97;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Anchor = AnchorStyles.Left;
-            dateTimePicker2.Location = new Point(540, 106);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(274, 22);
-            dateTimePicker2.TabIndex = 98;
-            // 
-            // textBox14
-            // 
-            textBox14.Anchor = AnchorStyles.Left;
-            textBox14.Location = new Point(540, 59);
-            textBox14.Margin = new Padding(3, 2, 3, 2);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(274, 22);
-            textBox14.TabIndex = 94;
+            txtCorreo.Anchor = AnchorStyles.Left;
+            txtCorreo.Location = new Point(542, 59);
+            txtCorreo.Margin = new Padding(3, 2, 3, 2);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(274, 22);
+            txtCorreo.TabIndex = 94;
             // 
             // label12
             // 
             label12.Anchor = AnchorStyles.Left;
             label12.AutoSize = true;
             label12.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label12.Location = new Point(416, 60);
+            label12.Location = new Point(418, 60);
             label12.Name = "label12";
             label12.Size = new Size(65, 20);
             label12.TabIndex = 95;
@@ -706,7 +701,7 @@
             label13.Anchor = AnchorStyles.Left;
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label13.Location = new Point(416, 107);
+            label13.Location = new Point(418, 107);
             label13.Name = "label13";
             label13.Size = new Size(88, 20);
             label13.TabIndex = 92;
@@ -717,7 +712,7 @@
             label19.Anchor = AnchorStyles.Left;
             label19.AutoSize = true;
             label19.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label19.Location = new Point(416, 154);
+            label19.Location = new Point(418, 154);
             label19.Name = "label19";
             label19.Size = new Size(66, 20);
             label19.TabIndex = 93;
@@ -730,7 +725,7 @@
             panel1.Controls.Add(label10);
             panel1.Location = new Point(0, 294);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1163, 80);
+            panel1.Size = new Size(1168, 70);
             panel1.TabIndex = 94;
             // 
             // label10
@@ -739,26 +734,35 @@
             label10.AutoSize = true;
             label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(447, 19);
+            label10.Location = new Point(451, 24);
             label10.Name = "label10";
             label10.Size = new Size(286, 25);
             label10.TabIndex = 0;
             label10.Text = "EMPLEADOS REGISTRADOS";
             // 
+            // txtEstado
+            // 
+            txtEstado.Anchor = AnchorStyles.Left;
+            txtEstado.Location = new Point(542, 153);
+            txtEstado.Margin = new Padding(3, 2, 3, 2);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(274, 22);
+            txtEstado.TabIndex = 99;
+            // 
             // F1Empleados
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1165, 720);
+            ClientSize = new Size(1170, 567);
             ControlBox = false;
             Controls.Add(panel1);
             Controls.Add(panel3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvEmpleados);
             Font = new Font("Microsoft Sans Serif", 7.8F);
             Margin = new Padding(3, 2, 3, 2);
             Name = "F1Empleados";
             ShowIcon = false;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             flowLayoutPanel4.ResumeLayout(false);
@@ -782,7 +786,7 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvEmpleados;
         private Panel panel2;
         private TextBox textBox3;
         private TextBox textBox2;
@@ -805,24 +809,22 @@
         private TextBox textBox15;
         private FlowLayoutPanel flowLayoutPanel4;
         private Label label14;
-        private TextBox textBox7;
+        private TextBox txtNombre;
         private Label label15;
-        private TextBox textBox9;
+        private TextBox txtApellido;
         private Label label17;
-        private TextBox textBox13;
+        private TextBox txtCedula;
         private Label label18;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateNacimiento;
         private Label label21;
-        private ComboBox comboBox2;
+        private ComboBox cbxGenero;
         private Panel panel3;
         private Label label11;
-        private ComboBox comboBox1;
+        private ComboBox cbxPuesto;
         private Label label12;
-        private TextBox textBox14;
+        private TextBox txtCorreo;
         private Label label13;
-        private DateTimePicker dateTimePicker2;
         private Label label19;
-        private ComboBox comboBox3;
         private PictureBox pictureBox1;
         private TableLayoutPanel tableLayoutPanel1;
         private DataGridViewTextBoxColumn ID;
@@ -836,5 +838,7 @@
         private DataGridViewTextBoxColumn ESTADO;
         private Panel panel1;
         private Label label10;
+        private DateTimePicker dateIngreso;
+        private TextBox txtEstado;
     }
 }
