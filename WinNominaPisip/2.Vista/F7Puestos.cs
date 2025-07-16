@@ -16,6 +16,7 @@ namespace WinNominaPisip._2.Vista
 {
     public partial class F7Puestos : Form
     {
+        //dgvLicencias
         private IconButton currentButton;
         private Color _botonColor;
         private readonly APINomina _nomminaAPI;
@@ -34,14 +35,14 @@ namespace WinNominaPisip._2.Vista
             try
             {
                 // Aquí puedes llamar al método de la API para obtener los empleados
-                var puestos = await _nomminaAPI.GetAsync<List<Puestos>>("PuestosControlador");
+                var puestos = await _nomminaAPI.GetAsync<List<Puestos>>("PuestosControlador/ListarEmpleadosPuestos/");
                 dgvPuestos.DataSource = puestos;
                 dgvPuestos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar los empleados: {ex.Message}");
+                MessageBox.Show($"Error al cargar los puestos: {ex.Message}");
             }
         }
         private void F7Puestos_Load(object sender, EventArgs e)

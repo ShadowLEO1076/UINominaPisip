@@ -28,35 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            dgvLicencias = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvLicencias).BeginInit();
             SuspendLayout();
             // 
-            // iconButton1
+            // dgvLicencias
             // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(432, 144);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(94, 29);
-            iconButton1.TabIndex = 0;
-            iconButton1.Text = "iconButton1";
-            iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
+            dgvLicencias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLicencias.Location = new Point(12, 116);
+            dgvLicencias.Name = "dgvLicencias";
+            dgvLicencias.RowHeadersWidth = 51;
+            dgvLicencias.Size = new Size(726, 188);
+            dgvLicencias.TabIndex = 0;
             // 
             // F5Asistencias
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(iconButton1);
+            Controls.Add(dgvLicencias);
             Name = "F5Asistencias";
             Text = "F5Asistencias";
+            Load += F5Asistencias_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvLicencias).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private DataGridView dgvLicencias;
     }
 }
