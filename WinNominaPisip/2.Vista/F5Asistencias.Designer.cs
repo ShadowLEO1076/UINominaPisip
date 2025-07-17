@@ -35,7 +35,7 @@
             // dgvLicencias
             // 
             dgvLicencias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLicencias.Location = new Point(12, 116);
+            dgvLicencias.Location = new Point(31, 200);
             dgvLicencias.Name = "dgvLicencias";
             dgvLicencias.RowHeadersWidth = 51;
             dgvLicencias.Size = new Size(726, 188);

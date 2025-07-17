@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            flowLayoutPanel4 = new FlowLayoutPanel();
+            btnBuscar = new FontAwesome.Sharp.IconButton();
+            textBox15 = new TextBox();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
+            iconButton3 = new FontAwesome.Sharp.IconButton();
             tableLayoutPanel2 = new TableLayoutPanel();
             comboBox3 = new ComboBox();
             dateTimePicker2 = new DateTimePicker();
@@ -47,29 +53,113 @@
             label11 = new Label();
             comboBox2 = new ComboBox();
             label4 = new Label();
-            btnBuscar = new FontAwesome.Sharp.IconButton();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            dataGridView1 = new DataGridView();
+            panel2 = new Panel();
+            label3 = new Label();
+            dgvTipoContrato = new DataGridView();
+            idContratoTipoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contratoJornadaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contratoTipoNombreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contratosTipoBindingSource = new BindingSource(components);
+            dgvContrato = new DataGridView();
+            idContratoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            fKidEmpleadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            fKidContratoTipoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            fechaInicioContratoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contratoFechaFinDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contratoSalarioDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            estadoContratoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            contratosBindingSource = new BindingSource(components);
             panel1.SuspendLayout();
+            flowLayoutPanel4.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTipoContrato).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)contratosTipoBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvContrato).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)contratosBindingSource).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.DarkGray;
-            panel1.Controls.Add(iconButton2);
+            panel1.Controls.Add(flowLayoutPanel4);
             panel1.Controls.Add(tableLayoutPanel2);
-            panel1.Controls.Add(btnBuscar);
-            panel1.Controls.Add(iconButton3);
-            panel1.Controls.Add(iconButton1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(937, 215);
             panel1.TabIndex = 86;
+            // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.Anchor = AnchorStyles.Right;
+            flowLayoutPanel4.Controls.Add(btnBuscar);
+            flowLayoutPanel4.Controls.Add(textBox15);
+            flowLayoutPanel4.Controls.Add(iconButton1);
+            flowLayoutPanel4.Controls.Add(iconButton2);
+            flowLayoutPanel4.Controls.Add(iconButton3);
+            flowLayoutPanel4.FlowDirection = FlowDirection.RightToLeft;
+            flowLayoutPanel4.Location = new Point(721, 0);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(216, 215);
+            flowLayoutPanel4.TabIndex = 98;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Anchor = AnchorStyles.Right;
+            btnBuscar.BackColor = Color.Transparent;
+            btnBuscar.FlatAppearance.BorderSize = 0;
+            btnBuscar.FlatStyle = FlatStyle.Flat;
+            btnBuscar.Font = new Font("Microsoft Sans Serif", 9F);
+            btnBuscar.ForeColor = Color.WhiteSmoke;
+            btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnBuscar.IconColor = Color.WhiteSmoke;
+            btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscar.IconSize = 35;
+            btnBuscar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBuscar.Location = new Point(155, 2);
+            btnBuscar.Margin = new Padding(3, 2, 3, 2);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Padding = new Padding(15, 0, 0, 0);
+            btnBuscar.Size = new Size(58, 47);
+            btnBuscar.TabIndex = 84;
+            btnBuscar.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // textBox15
+            // 
+            textBox15.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            textBox15.Location = new Point(4, 12);
+            textBox15.Margin = new Padding(3, 2, 3, 2);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(145, 27);
+            textBox15.TabIndex = 87;
+            // 
+            // iconButton1
+            // 
+            iconButton1.Anchor = AnchorStyles.Right;
+            iconButton1.BackColor = Color.Transparent;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.Font = new Font("Microsoft Sans Serif", 9F);
+            iconButton1.ForeColor = Color.WhiteSmoke;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
+            iconButton1.IconColor = Color.WhiteSmoke;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 35;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(31, 53);
+            iconButton1.Margin = new Padding(3, 2, 3, 2);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Padding = new Padding(15, 0, 0, 0);
+            iconButton1.Size = new Size(182, 48);
+            iconButton1.TabIndex = 70;
+            iconButton1.Text = "Agregar";
+            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton1.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
@@ -84,16 +174,40 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 35;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(755, 163);
+            iconButton2.Location = new Point(31, 105);
             iconButton2.Margin = new Padding(3, 2, 3, 2);
             iconButton2.Name = "iconButton2";
             iconButton2.Padding = new Padding(15, 0, 0, 0);
-            iconButton2.Size = new Size(170, 46);
+            iconButton2.Size = new Size(182, 46);
             iconButton2.TabIndex = 71;
             iconButton2.Text = "Actualizar";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // iconButton3
+            // 
+            iconButton3.Anchor = AnchorStyles.Right;
+            iconButton3.BackColor = Color.Transparent;
+            iconButton3.FlatAppearance.BorderSize = 0;
+            iconButton3.FlatStyle = FlatStyle.Flat;
+            iconButton3.Font = new Font("Microsoft Sans Serif", 9F);
+            iconButton3.ForeColor = Color.WhiteSmoke;
+            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            iconButton3.IconColor = Color.WhiteSmoke;
+            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton3.IconSize = 35;
+            iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton3.Location = new Point(31, 155);
+            iconButton3.Margin = new Padding(3, 2, 3, 2);
+            iconButton3.Name = "iconButton3";
+            iconButton3.Padding = new Padding(15, 0, 0, 0);
+            iconButton3.Size = new Size(182, 48);
+            iconButton3.TabIndex = 72;
+            iconButton3.Text = "Eliminar";
+            iconButton3.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton3.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel2
             // 
@@ -288,103 +402,162 @@
             label4.TabIndex = 29;
             label4.Text = "Jornada:";
             // 
-            // btnBuscar
+            // panel2
             // 
-            btnBuscar.Anchor = AnchorStyles.Right;
-            btnBuscar.BackColor = Color.Transparent;
-            btnBuscar.FlatAppearance.BorderSize = 0;
-            btnBuscar.FlatStyle = FlatStyle.Flat;
-            btnBuscar.Font = new Font("Microsoft Sans Serif", 9F);
-            btnBuscar.ForeColor = Color.WhiteSmoke;
-            btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            btnBuscar.IconColor = Color.WhiteSmoke;
-            btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscar.IconSize = 35;
-            btnBuscar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscar.Location = new Point(755, 11);
-            btnBuscar.Margin = new Padding(3, 2, 3, 2);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Padding = new Padding(15, 0, 0, 0);
-            btnBuscar.Size = new Size(170, 46);
-            btnBuscar.TabIndex = 84;
-            btnBuscar.Text = "Consultar";
-            btnBuscar.TextAlign = ContentAlignment.MiddleLeft;
-            btnBuscar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscar.UseVisualStyleBackColor = false;
+            panel2.BackColor = SystemColors.ControlDarkDark;
+            panel2.Controls.Add(label3);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 215);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(937, 70);
+            panel2.TabIndex = 97;
             // 
-            // iconButton3
+            // label3
             // 
-            iconButton3.Anchor = AnchorStyles.Right;
-            iconButton3.BackColor = Color.Transparent;
-            iconButton3.FlatAppearance.BorderSize = 0;
-            iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.Font = new Font("Microsoft Sans Serif", 9F);
-            iconButton3.ForeColor = Color.WhiteSmoke;
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            iconButton3.IconColor = Color.WhiteSmoke;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.IconSize = 35;
-            iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(755, 113);
-            iconButton3.Margin = new Padding(3, 2, 3, 2);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Padding = new Padding(15, 0, 0, 0);
-            iconButton3.Size = new Size(170, 46);
-            iconButton3.TabIndex = 72;
-            iconButton3.Text = "Eliminar";
-            iconButton3.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton3.UseVisualStyleBackColor = false;
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(300, 22);
+            label3.Name = "label3";
+            label3.Size = new Size(289, 25);
+            label3.TabIndex = 0;
+            label3.Text = "CONTRATOS REGISTRADOS";
             // 
-            // iconButton1
+            // dgvTipoContrato
             // 
-            iconButton1.Anchor = AnchorStyles.Right;
-            iconButton1.BackColor = Color.Transparent;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Microsoft Sans Serif", 9F);
-            iconButton1.ForeColor = Color.WhiteSmoke;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
-            iconButton1.IconColor = Color.WhiteSmoke;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 35;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(755, 61);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Padding = new Padding(15, 0, 0, 0);
-            iconButton1.Size = new Size(170, 48);
-            iconButton1.TabIndex = 70;
-            iconButton1.Text = "Guardar";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
+            dgvTipoContrato.AutoGenerateColumns = false;
+            dgvTipoContrato.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTipoContrato.BackgroundColor = Color.DimGray;
+            dgvTipoContrato.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTipoContrato.Columns.AddRange(new DataGridViewColumn[] { idContratoTipoDataGridViewTextBoxColumn, contratoJornadaDataGridViewTextBoxColumn, contratoTipoNombreDataGridViewTextBoxColumn });
+            dgvTipoContrato.DataSource = contratosTipoBindingSource;
+            dgvTipoContrato.Dock = DockStyle.Top;
+            dgvTipoContrato.ImeMode = ImeMode.Disable;
+            dgvTipoContrato.Location = new Point(0, 285);
+            dgvTipoContrato.Margin = new Padding(3, 2, 3, 2);
+            dgvTipoContrato.Name = "dgvTipoContrato";
+            dgvTipoContrato.RowHeadersWidth = 51;
+            dgvTipoContrato.Size = new Size(937, 113);
+            dgvTipoContrato.TabIndex = 98;
             // 
-            // dataGridView1
+            // idContratoTipoDataGridViewTextBoxColumn
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.DimGray;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-8, 219);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(945, 296);
-            dataGridView1.TabIndex = 87;
+            idContratoTipoDataGridViewTextBoxColumn.DataPropertyName = "idContratoTipo";
+            idContratoTipoDataGridViewTextBoxColumn.HeaderText = "idContratoTipo";
+            idContratoTipoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idContratoTipoDataGridViewTextBoxColumn.Name = "idContratoTipoDataGridViewTextBoxColumn";
+            // 
+            // contratoJornadaDataGridViewTextBoxColumn
+            // 
+            contratoJornadaDataGridViewTextBoxColumn.DataPropertyName = "ContratoJornada";
+            contratoJornadaDataGridViewTextBoxColumn.HeaderText = "ContratoJornada";
+            contratoJornadaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            contratoJornadaDataGridViewTextBoxColumn.Name = "contratoJornadaDataGridViewTextBoxColumn";
+            // 
+            // contratoTipoNombreDataGridViewTextBoxColumn
+            // 
+            contratoTipoNombreDataGridViewTextBoxColumn.DataPropertyName = "ContratoTipoNombre";
+            contratoTipoNombreDataGridViewTextBoxColumn.HeaderText = "ContratoTipoNombre";
+            contratoTipoNombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            contratoTipoNombreDataGridViewTextBoxColumn.Name = "contratoTipoNombreDataGridViewTextBoxColumn";
+            // 
+            // contratosTipoBindingSource
+            // 
+            contratosTipoBindingSource.DataSource = typeof(NominaPISIB.Infraestructura.AccesoDatos.ContratosTipo);
+            // 
+            // dgvContrato
+            // 
+            dgvContrato.AutoGenerateColumns = false;
+            dgvContrato.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvContrato.BackgroundColor = Color.DimGray;
+            dgvContrato.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvContrato.Columns.AddRange(new DataGridViewColumn[] { idContratoDataGridViewTextBoxColumn, fKidEmpleadoDataGridViewTextBoxColumn, fKidContratoTipoDataGridViewTextBoxColumn, fechaInicioContratoDataGridViewTextBoxColumn, contratoFechaFinDataGridViewTextBoxColumn, contratoSalarioDataGridViewTextBoxColumn, estadoContratoDataGridViewTextBoxColumn });
+            dgvContrato.DataSource = contratosBindingSource;
+            dgvContrato.Dock = DockStyle.Fill;
+            dgvContrato.ImeMode = ImeMode.Disable;
+            dgvContrato.Location = new Point(0, 398);
+            dgvContrato.Margin = new Padding(3, 2, 3, 2);
+            dgvContrato.Name = "dgvContrato";
+            dgvContrato.RowHeadersWidth = 51;
+            dgvContrato.Size = new Size(937, 121);
+            dgvContrato.TabIndex = 99;
+            // 
+            // idContratoDataGridViewTextBoxColumn
+            // 
+            idContratoDataGridViewTextBoxColumn.DataPropertyName = "idContrato";
+            idContratoDataGridViewTextBoxColumn.HeaderText = "idContrato";
+            idContratoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idContratoDataGridViewTextBoxColumn.Name = "idContratoDataGridViewTextBoxColumn";
+            // 
+            // fKidEmpleadoDataGridViewTextBoxColumn
+            // 
+            fKidEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "FKidEmpleado";
+            fKidEmpleadoDataGridViewTextBoxColumn.HeaderText = "FKidEmpleado";
+            fKidEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            fKidEmpleadoDataGridViewTextBoxColumn.Name = "fKidEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // fKidContratoTipoDataGridViewTextBoxColumn
+            // 
+            fKidContratoTipoDataGridViewTextBoxColumn.DataPropertyName = "FKidContratoTipo";
+            fKidContratoTipoDataGridViewTextBoxColumn.HeaderText = "FKidContratoTipo";
+            fKidContratoTipoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            fKidContratoTipoDataGridViewTextBoxColumn.Name = "fKidContratoTipoDataGridViewTextBoxColumn";
+            // 
+            // fechaInicioContratoDataGridViewTextBoxColumn
+            // 
+            fechaInicioContratoDataGridViewTextBoxColumn.DataPropertyName = "FechaInicioContrato";
+            fechaInicioContratoDataGridViewTextBoxColumn.HeaderText = "FechaInicioContrato";
+            fechaInicioContratoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            fechaInicioContratoDataGridViewTextBoxColumn.Name = "fechaInicioContratoDataGridViewTextBoxColumn";
+            // 
+            // contratoFechaFinDataGridViewTextBoxColumn
+            // 
+            contratoFechaFinDataGridViewTextBoxColumn.DataPropertyName = "ContratoFechaFin";
+            contratoFechaFinDataGridViewTextBoxColumn.HeaderText = "ContratoFechaFin";
+            contratoFechaFinDataGridViewTextBoxColumn.MinimumWidth = 6;
+            contratoFechaFinDataGridViewTextBoxColumn.Name = "contratoFechaFinDataGridViewTextBoxColumn";
+            // 
+            // contratoSalarioDataGridViewTextBoxColumn
+            // 
+            contratoSalarioDataGridViewTextBoxColumn.DataPropertyName = "ContratoSalario";
+            contratoSalarioDataGridViewTextBoxColumn.HeaderText = "ContratoSalario";
+            contratoSalarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            contratoSalarioDataGridViewTextBoxColumn.Name = "contratoSalarioDataGridViewTextBoxColumn";
+            // 
+            // estadoContratoDataGridViewTextBoxColumn
+            // 
+            estadoContratoDataGridViewTextBoxColumn.DataPropertyName = "EstadoContrato";
+            estadoContratoDataGridViewTextBoxColumn.HeaderText = "EstadoContrato";
+            estadoContratoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            estadoContratoDataGridViewTextBoxColumn.Name = "estadoContratoDataGridViewTextBoxColumn";
+            // 
+            // contratosBindingSource
+            // 
+            contratosBindingSource.DataSource = typeof(NominaPISIB.Infraestructura.AccesoDatos.Contratos);
             // 
             // F2Contratos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(937, 519);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvContrato);
+            Controls.Add(dgvTipoContrato);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "F2Contratos";
             Text = "F2Contratos";
             panel1.ResumeLayout(false);
+            flowLayoutPanel4.ResumeLayout(false);
+            flowLayoutPanel4.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTipoContrato).EndInit();
+            ((System.ComponentModel.ISupportInitialize)contratosTipoBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvContrato).EndInit();
+            ((System.ComponentModel.ISupportInitialize)contratosBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -399,13 +572,8 @@
         private Label label19;
         private Label label17;
         private Label label20;
-        private DataGridView dataGridView1;
         private Label label2;
         private Label label1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton btnBuscar;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private TextBox textBox1;
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox1;
@@ -413,5 +581,27 @@
         private DateTimePicker dateTimePicker2;
         private Label label4;
         private ComboBox comboBox3;
+        private Panel panel2;
+        private Label label3;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private FontAwesome.Sharp.IconButton btnBuscar;
+        private TextBox textBox15;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private DataGridView dgvTipoContrato;
+        private BindingSource contratosTipoBindingSource;
+        private DataGridView dgvContrato;
+        private DataGridViewTextBoxColumn idContratoTipoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn contratoJornadaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn contratoTipoNombreDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idContratoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn fKidEmpleadoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn fKidContratoTipoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn fechaInicioContratoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn contratoFechaFinDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn contratoSalarioDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn estadoContratoDataGridViewTextBoxColumn;
+        private BindingSource contratosBindingSource;
     }
 }

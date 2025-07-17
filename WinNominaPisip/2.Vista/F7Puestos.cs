@@ -85,7 +85,7 @@ namespace WinNominaPisip._2.Vista
             {
                 if (control is Label lbl)
                 {
-                    lbl.ForeColor = Color.Black;
+                    lbl.ForeColor = Color.White;
                 }
             }
 
@@ -102,7 +102,7 @@ namespace WinNominaPisip._2.Vista
                     btn.ForeColor = Color.White;
                     btn.IconColor = Color.White;
                     btn.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-                    flowLayoutPanel1.BackColor = ThemeColor.PrimaryColor; /// panel de botones algo nuevo mucho ojooooo
+                    //flowLayoutPanel1.BackColor = ThemeColor.PrimaryColor; /// panel de botones algo nuevo mucho ojooooo
                     panel1.BackColor = ThemeColor.SecondaryColor;
                 }
                 else if (control is Label lbl)

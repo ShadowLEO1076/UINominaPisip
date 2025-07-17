@@ -28,38 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label2 = new Label();
-            label1 = new Label();
-            comboBox2 = new ComboBox();
+            cbxEmpleadosL = new ComboBox();
             label8 = new Label();
             comboBox1 = new ComboBox();
             label3 = new Label();
             label6 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            label9 = new Label();
-            dateTimePicker2 = new DateTimePicker();
             label5 = new Label();
             textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label11 = new Label();
             label4 = new Label();
             label10 = new Label();
-            textBox4 = new TextBox();
+            txtAnio = new TextBox();
             textBox1 = new TextBox();
             label7 = new Label();
             textBox5 = new TextBox();
             label12 = new Label();
-            textBox6 = new TextBox();
+            label2 = new Label();
+            label14 = new Label();
+            cbxMes = new ComboBox();
             panel6 = new Panel();
+            flowLayoutPanel4 = new FlowLayoutPanel();
+            btnConsultar = new FontAwesome.Sharp.IconButton();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
-            btnBuscar = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            dataGridView1 = new DataGridView();
+            bonificacionesBindingSource = new BindingSource(components);
+            panel1 = new Panel();
+            label13 = new Label();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            dataGridView2 = new DataGridView();
+            dgvBonificaciones = new DataGridView();
+            idBonificacionesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            idEmpleadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bonificacionTipoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bonificacionDescripcionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bonificacionMontoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bonificacionFechaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            flowLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bonificacionesBindingSource).BeginInit();
+            panel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBonificaciones).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,28 +84,24 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            tableLayoutPanel1.Controls.Add(label2, 3, 0);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Controls.Add(comboBox2, 3, 1);
+            tableLayoutPanel1.Controls.Add(cbxEmpleadosL, 3, 1);
             tableLayoutPanel1.Controls.Add(label8, 2, 1);
             tableLayoutPanel1.Controls.Add(comboBox1, 1, 1);
             tableLayoutPanel1.Controls.Add(label3, 0, 1);
             tableLayoutPanel1.Controls.Add(label6, 0, 5);
             tableLayoutPanel1.Controls.Add(dateTimePicker1, 1, 5);
-            tableLayoutPanel1.Controls.Add(label9, 2, 5);
-            tableLayoutPanel1.Controls.Add(dateTimePicker2, 3, 5);
             tableLayoutPanel1.Controls.Add(label5, 0, 4);
             tableLayoutPanel1.Controls.Add(textBox2, 1, 4);
-            tableLayoutPanel1.Controls.Add(textBox3, 3, 4);
-            tableLayoutPanel1.Controls.Add(label11, 2, 4);
             tableLayoutPanel1.Controls.Add(label4, 0, 3);
             tableLayoutPanel1.Controls.Add(label10, 2, 3);
-            tableLayoutPanel1.Controls.Add(textBox4, 3, 3);
+            tableLayoutPanel1.Controls.Add(txtAnio, 3, 3);
             tableLayoutPanel1.Controls.Add(textBox1, 1, 3);
             tableLayoutPanel1.Controls.Add(label7, 0, 2);
             tableLayoutPanel1.Controls.Add(textBox5, 1, 2);
             tableLayoutPanel1.Controls.Add(label12, 2, 2);
-            tableLayoutPanel1.Controls.Add(textBox6, 3, 2);
+            tableLayoutPanel1.Controls.Add(label2, 1, 0);
+            tableLayoutPanel1.Controls.Add(label14, 3, 0);
+            tableLayoutPanel1.Controls.Add(cbxMes, 3, 2);
             tableLayoutPanel1.Location = new Point(12, 12);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 6;
@@ -104,39 +114,14 @@
             tableLayoutPanel1.Size = new Size(702, 209);
             tableLayoutPanel1.TabIndex = 9;
             // 
-            // label2
+            // cbxEmpleadosL
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(523, 6);
-            label2.Name = "label2";
-            label2.Size = new Size(146, 22);
-            label2.TabIndex = 0;
-            label2.Text = "DESCUENTOS";
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(157, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(175, 22);
-            label1.TabIndex = 0;
-            label1.Text = "BONIFICACIONES";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Anchor = AnchorStyles.None;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(493, 37);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(206, 28);
-            comboBox2.TabIndex = 13;
+            cbxEmpleadosL.Anchor = AnchorStyles.None;
+            cbxEmpleadosL.FormattingEnabled = true;
+            cbxEmpleadosL.Location = new Point(493, 37);
+            cbxEmpleadosL.Name = "cbxEmpleadosL";
+            cbxEmpleadosL.Size = new Size(206, 28);
+            cbxEmpleadosL.TabIndex = 13;
             // 
             // label8
             // 
@@ -188,25 +173,6 @@
             dateTimePicker1.Size = new Size(204, 27);
             dateTimePicker1.TabIndex = 8;
             // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 9F);
-            label9.Location = new Point(366, 180);
-            label9.Name = "label9";
-            label9.Size = new Size(107, 18);
-            label9.TabIndex = 21;
-            label9.Text = "Fecha Emision";
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Anchor = AnchorStyles.None;
-            dateTimePicker2.Location = new Point(493, 176);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(206, 27);
-            dateTimePicker2.TabIndex = 22;
-            // 
             // label5
             // 
             label5.Anchor = AnchorStyles.None;
@@ -225,25 +191,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(204, 27);
             textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(493, 139);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(206, 27);
-            textBox3.TabIndex = 17;
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.None;
-            label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 9F);
-            label11.Location = new Point(392, 144);
-            label11.Name = "label11";
-            label11.Size = new Size(55, 18);
-            label11.TabIndex = 20;
-            label11.Text = "Monto:";
             // 
             // label4
             // 
@@ -267,13 +214,13 @@
             label10.TabIndex = 19;
             label10.Text = "Descripcion:";
             // 
-            // textBox4
+            // txtAnio
             // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(493, 105);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(206, 27);
-            textBox4.TabIndex = 18;
+            txtAnio.Anchor = AnchorStyles.None;
+            txtAnio.Location = new Point(493, 105);
+            txtAnio.Name = "txtAnio";
+            txtAnio.Size = new Size(206, 27);
+            txtAnio.TabIndex = 18;
             // 
             // textBox1
             // 
@@ -313,27 +260,113 @@
             label12.TabIndex = 25;
             label12.Text = "Descripcion:";
             // 
-            // textBox6
+            // label2
             // 
-            textBox6.Anchor = AnchorStyles.None;
-            textBox6.Location = new Point(493, 71);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(206, 27);
-            textBox6.TabIndex = 26;
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(163, 6);
+            label2.Name = "label2";
+            label2.Size = new Size(164, 22);
+            label2.TabIndex = 0;
+            label2.Text = "PERCEPCIONES";
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.None;
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold);
+            label14.ForeColor = SystemColors.ControlLightLight;
+            label14.Location = new Point(531, 6);
+            label14.Name = "label14";
+            label14.Size = new Size(130, 22);
+            label14.TabIndex = 27;
+            label14.Text = "CONSULTAS";
+            // 
+            // cbxMes
+            // 
+            cbxMes.Anchor = AnchorStyles.None;
+            cbxMes.FormattingEnabled = true;
+            cbxMes.Location = new Point(493, 71);
+            cbxMes.Name = "cbxMes";
+            cbxMes.Size = new Size(206, 28);
+            cbxMes.TabIndex = 28;
             // 
             // panel6
             // 
             panel6.BackColor = Color.DarkGray;
-            panel6.Controls.Add(iconButton2);
+            panel6.Controls.Add(flowLayoutPanel4);
             panel6.Controls.Add(tableLayoutPanel1);
-            panel6.Controls.Add(iconButton3);
-            panel6.Controls.Add(btnBuscar);
-            panel6.Controls.Add(iconButton1);
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(962, 244);
             panel6.TabIndex = 96;
+            // 
+            // flowLayoutPanel4
+            // 
+            flowLayoutPanel4.Anchor = AnchorStyles.Right;
+            flowLayoutPanel4.Controls.Add(btnConsultar);
+            flowLayoutPanel4.Controls.Add(iconButton1);
+            flowLayoutPanel4.Controls.Add(iconButton2);
+            flowLayoutPanel4.Controls.Add(iconButton3);
+            flowLayoutPanel4.FlowDirection = FlowDirection.RightToLeft;
+            flowLayoutPanel4.Location = new Point(720, 0);
+            flowLayoutPanel4.Name = "flowLayoutPanel4";
+            flowLayoutPanel4.Size = new Size(242, 244);
+            flowLayoutPanel4.TabIndex = 99;
+            // 
+            // btnConsultar
+            // 
+            btnConsultar.Anchor = AnchorStyles.Right;
+            btnConsultar.BackColor = Color.Transparent;
+            btnConsultar.FlatAppearance.BorderSize = 0;
+            btnConsultar.FlatStyle = FlatStyle.Flat;
+            btnConsultar.Font = new Font("Microsoft Sans Serif", 9F);
+            btnConsultar.ForeColor = Color.WhiteSmoke;
+            btnConsultar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnConsultar.IconColor = Color.WhiteSmoke;
+            btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnConsultar.IconSize = 35;
+            btnConsultar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConsultar.Location = new Point(57, 2);
+            btnConsultar.Margin = new Padding(3, 2, 3, 2);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Padding = new Padding(15, 0, 0, 0);
+            btnConsultar.Size = new Size(182, 47);
+            btnConsultar.TabIndex = 84;
+            btnConsultar.Text = " Consultar";
+            btnConsultar.TextAlign = ContentAlignment.MiddleLeft;
+            btnConsultar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnConsultar.UseVisualStyleBackColor = false;
+            btnConsultar.Click += btnConsultar_Click;
+            // 
+            // iconButton1
+            // 
+            iconButton1.Anchor = AnchorStyles.Right;
+            iconButton1.BackColor = Color.Transparent;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.Font = new Font("Microsoft Sans Serif", 9F);
+            iconButton1.ForeColor = Color.WhiteSmoke;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
+            iconButton1.IconColor = Color.WhiteSmoke;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 35;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(57, 53);
+            iconButton1.Margin = new Padding(3, 2, 3, 2);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Padding = new Padding(15, 0, 0, 0);
+            iconButton1.Size = new Size(182, 48);
+            iconButton1.TabIndex = 70;
+            iconButton1.Text = "Agregar";
+            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton1.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
@@ -341,19 +374,19 @@
             iconButton2.BackColor = Color.Transparent;
             iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.Font = new Font("Microsoft Sans Serif", 7.8F);
+            iconButton2.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton2.ForeColor = Color.WhiteSmoke;
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.FilePen;
             iconButton2.IconColor = Color.WhiteSmoke;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 35;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(794, 125);
+            iconButton2.Location = new Point(57, 105);
             iconButton2.Margin = new Padding(3, 2, 3, 2);
             iconButton2.Name = "iconButton2";
             iconButton2.Padding = new Padding(15, 0, 0, 0);
-            iconButton2.Size = new Size(156, 46);
-            iconButton2.TabIndex = 99;
+            iconButton2.Size = new Size(182, 46);
+            iconButton2.TabIndex = 71;
             iconButton2.Text = "Actualizar";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -365,83 +398,135 @@
             iconButton3.BackColor = Color.Transparent;
             iconButton3.FlatAppearance.BorderSize = 0;
             iconButton3.FlatStyle = FlatStyle.Flat;
-            iconButton3.Font = new Font("Microsoft Sans Serif", 7.8F);
+            iconButton3.Font = new Font("Microsoft Sans Serif", 9F);
             iconButton3.ForeColor = Color.WhiteSmoke;
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.Trash;
             iconButton3.IconColor = Color.WhiteSmoke;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 35;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(794, 175);
+            iconButton3.Location = new Point(57, 155);
             iconButton3.Margin = new Padding(3, 2, 3, 2);
             iconButton3.Name = "iconButton3";
             iconButton3.Padding = new Padding(15, 0, 0, 0);
-            iconButton3.Size = new Size(156, 46);
-            iconButton3.TabIndex = 100;
+            iconButton3.Size = new Size(182, 48);
+            iconButton3.TabIndex = 72;
             iconButton3.Text = "Eliminar";
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;
             iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton3.UseVisualStyleBackColor = false;
             // 
-            // btnBuscar
+            // bonificacionesBindingSource
             // 
-            btnBuscar.Anchor = AnchorStyles.Right;
-            btnBuscar.BackColor = Color.Transparent;
-            btnBuscar.FlatAppearance.BorderSize = 0;
-            btnBuscar.FlatStyle = FlatStyle.Flat;
-            btnBuscar.Font = new Font("Microsoft Sans Serif", 7.8F);
-            btnBuscar.ForeColor = Color.WhiteSmoke;
-            btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            btnBuscar.IconColor = Color.WhiteSmoke;
-            btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscar.IconSize = 35;
-            btnBuscar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscar.Location = new Point(794, 22);
-            btnBuscar.Margin = new Padding(3, 2, 3, 2);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Padding = new Padding(15, 0, 0, 0);
-            btnBuscar.Size = new Size(156, 46);
-            btnBuscar.TabIndex = 101;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.TextAlign = ContentAlignment.MiddleLeft;
-            btnBuscar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscar.UseVisualStyleBackColor = false;
-            btnBuscar.Click += btnBuscar_Click_1;
+            bonificacionesBindingSource.DataSource = typeof(NominaPISIB.Infraestructura.AccesoDatos.Bonificaciones);
             // 
-            // iconButton1
+            // panel1
             // 
-            iconButton1.Anchor = AnchorStyles.Right;
-            iconButton1.BackColor = Color.Transparent;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Microsoft Sans Serif", 7.8F);
-            iconButton1.ForeColor = Color.WhiteSmoke;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
-            iconButton1.IconColor = Color.WhiteSmoke;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 35;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(794, 72);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Padding = new Padding(15, 0, 0, 0);
-            iconButton1.Size = new Size(156, 46);
-            iconButton1.TabIndex = 98;
-            iconButton1.Text = "Agregar";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
+            panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(label13);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 244);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(962, 70);
+            panel1.TabIndex = 99;
             // 
-            // dataGridView1
+            // label13
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.DarkGray;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 250);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(962, 363);
-            dataGridView1.TabIndex = 97;
+            label13.Anchor = AnchorStyles.None;
+            label13.AutoSize = true;
+            label13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(404, 22);
+            label13.Name = "label13";
+            label13.Size = new Size(156, 25);
+            label13.TabIndex = 0;
+            label13.Text = "REGISTRADOS";
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(dataGridView2, 1, 0);
+            tableLayoutPanel2.Controls.Add(dgvBonificaciones, 0, 0);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(0, 314);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(962, 300);
+            tableLayoutPanel2.TabIndex = 99;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView2.BackgroundColor = Color.DarkGray;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(484, 3);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(475, 294);
+            dataGridView2.TabIndex = 98;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
+            // dgvBonificaciones
+            // 
+            dgvBonificaciones.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvBonificaciones.AutoGenerateColumns = false;
+            dgvBonificaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBonificaciones.BackgroundColor = Color.DarkGray;
+            dgvBonificaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBonificaciones.Columns.AddRange(new DataGridViewColumn[] { idBonificacionesDataGridViewTextBoxColumn, idEmpleadoDataGridViewTextBoxColumn, bonificacionTipoDataGridViewTextBoxColumn, bonificacionDescripcionDataGridViewTextBoxColumn, bonificacionMontoDataGridViewTextBoxColumn, bonificacionFechaDataGridViewTextBoxColumn });
+            dgvBonificaciones.DataSource = bonificacionesBindingSource;
+            dgvBonificaciones.Location = new Point(3, 3);
+            dgvBonificaciones.Name = "dgvBonificaciones";
+            dgvBonificaciones.RowHeadersWidth = 51;
+            dgvBonificaciones.Size = new Size(475, 294);
+            dgvBonificaciones.TabIndex = 97;
+            // 
+            // idBonificacionesDataGridViewTextBoxColumn
+            // 
+            idBonificacionesDataGridViewTextBoxColumn.DataPropertyName = "idBonificaciones";
+            idBonificacionesDataGridViewTextBoxColumn.HeaderText = "idBonificaciones";
+            idBonificacionesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idBonificacionesDataGridViewTextBoxColumn.Name = "idBonificacionesDataGridViewTextBoxColumn";
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado";
+            idEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado";
+            idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // bonificacionTipoDataGridViewTextBoxColumn
+            // 
+            bonificacionTipoDataGridViewTextBoxColumn.DataPropertyName = "BonificacionTipo";
+            bonificacionTipoDataGridViewTextBoxColumn.HeaderText = "BonificacionTipo";
+            bonificacionTipoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            bonificacionTipoDataGridViewTextBoxColumn.Name = "bonificacionTipoDataGridViewTextBoxColumn";
+            // 
+            // bonificacionDescripcionDataGridViewTextBoxColumn
+            // 
+            bonificacionDescripcionDataGridViewTextBoxColumn.DataPropertyName = "BonificacionDescripcion";
+            bonificacionDescripcionDataGridViewTextBoxColumn.HeaderText = "BonificacionDescripcion";
+            bonificacionDescripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            bonificacionDescripcionDataGridViewTextBoxColumn.Name = "bonificacionDescripcionDataGridViewTextBoxColumn";
+            // 
+            // bonificacionMontoDataGridViewTextBoxColumn
+            // 
+            bonificacionMontoDataGridViewTextBoxColumn.DataPropertyName = "BonificacionMonto";
+            bonificacionMontoDataGridViewTextBoxColumn.HeaderText = "BonificacionMonto";
+            bonificacionMontoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            bonificacionMontoDataGridViewTextBoxColumn.Name = "bonificacionMontoDataGridViewTextBoxColumn";
+            // 
+            // bonificacionFechaDataGridViewTextBoxColumn
+            // 
+            bonificacionFechaDataGridViewTextBoxColumn.DataPropertyName = "BonificacionFecha";
+            bonificacionFechaDataGridViewTextBoxColumn.HeaderText = "BonificacionFecha";
+            bonificacionFechaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            bonificacionFechaDataGridViewTextBoxColumn.Name = "bonificacionFechaDataGridViewTextBoxColumn";
             // 
             // F4Percepciones
             // 
@@ -449,7 +534,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(962, 614);
             ControlBox = false;
-            Controls.Add(dataGridView1);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(panel1);
             Controls.Add(panel6);
             FormBorderStyle = FormBorderStyle.None;
             Name = "F4Percepciones";
@@ -458,7 +544,13 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            flowLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bonificacionesBindingSource).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBonificaciones).EndInit();
             ResumeLayout(false);
         }
 
@@ -473,27 +565,40 @@
         private TextBox textBox1;
         private ComboBox comboBox1;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView1;
         private Panel panel2;
         private Label label7;
         private DateTimePicker dateTimePicker2;
         private Label label9;
         private Label label11;
         private Label label10;
-        private TextBox textBox4;
-        private ComboBox comboBox2;
+        private TextBox txtAnio;
+        private ComboBox cbxEmpleadosL;
         private Label label8;
         private Panel panel5;
         private Panel panel4;
         private TextBox textBox3;
         private Label label2;
         private Panel panel6;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton btnBuscar;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private TextBox textBox5;
         private Label label12;
-        private TextBox textBox6;
+        private BindingSource bonificacionesBindingSource;
+        private FlowLayoutPanel flowLayoutPanel4;
+        private FontAwesome.Sharp.IconButton btnConsultar;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private Panel panel1;
+        private Label label13;
+        private TableLayoutPanel tableLayoutPanel2;
+        private DataGridView dataGridView2;
+        private DataGridView dgvBonificaciones;
+        private DataGridViewTextBoxColumn idBonificacionesDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bonificacionTipoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bonificacionDescripcionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bonificacionMontoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bonificacionFechaDataGridViewTextBoxColumn;
+        private Label label14;
+        private ComboBox cbxMes;
     }
 }

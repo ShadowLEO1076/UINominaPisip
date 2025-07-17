@@ -335,13 +335,13 @@
             panelLogo2.Dock = DockStyle.Top;
             panelLogo2.Location = new Point(220, 0);
             panelLogo2.Name = "panelLogo2";
-            panelLogo2.Size = new Size(967, 81);
+            panelLogo2.Size = new Size(1121, 81);
             panelLogo2.TabIndex = 25;
             // 
             // panel4
             // 
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(843, 0);
+            panel4.Location = new Point(997, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(124, 81);
             panel4.TabIndex = 3;
@@ -376,7 +376,7 @@
             labelTitulo.AutoSize = true;
             labelTitulo.Font = new Font("MS Reference Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelTitulo.ForeColor = SystemColors.ControlLightLight;
-            labelTitulo.Location = new Point(368, 24);
+            labelTitulo.Location = new Point(445, 24);
             labelTitulo.Name = "labelTitulo";
             labelTitulo.Size = new Size(199, 26);
             labelTitulo.TabIndex = 0;
@@ -391,7 +391,7 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(210, 108);
+            pictureBox1.Location = new Point(287, 108);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(552, 475);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -406,7 +406,7 @@
             panelEscritorio.ForeColor = Color.Black;
             panelEscritorio.Location = new Point(220, 81);
             panelEscritorio.Name = "panelEscritorio";
-            panelEscritorio.Size = new Size(967, 703);
+            panelEscritorio.Size = new Size(1121, 703);
             panelEscritorio.TabIndex = 26;
             // 
             // Main
@@ -414,7 +414,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1187, 784);
+            ClientSize = new Size(1341, 784);
             Controls.Add(panelEscritorio);
             Controls.Add(panelLogo2);
             Controls.Add(panelMenu);

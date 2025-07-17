@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            components = new System.ComponentModel.Container();
             btnBuscar = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
-            dgvEmpleados = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            NOMBRE = new DataGridViewTextBoxColumn();
-            APELLIDO = new DataGridViewTextBoxColumn();
-            CEDULA = new DataGridViewTextBoxColumn();
-            NACIMIENTO = new DataGridViewTextBoxColumn();
-            GENERO = new DataGridViewTextBoxColumn();
-            PUESTO = new DataGridViewTextBoxColumn();
-            FINGRESO = new DataGridViewTextBoxColumn();
-            ESTADO = new DataGridViewTextBoxColumn();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -76,6 +66,7 @@
             cbxGenero = new ComboBox();
             panel3 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            txtEstado = new TextBox();
             dateIngreso = new DateTimePicker();
             label11 = new Label();
             cbxPuesto = new ComboBox();
@@ -85,13 +76,26 @@
             label19 = new Label();
             panel1 = new Panel();
             label10 = new Label();
-            txtEstado = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
+            dgvEmpleados = new DataGridView();
+            idEmpleadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            fKidPuestoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoNombresDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoApellidosDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoCedulaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoCorreoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoFechaNacimientoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoEstadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoGeneroDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoTelfPersonalDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadoFechaIngresoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            empleadosBindingSource = new BindingSource(components);
             panel2.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)empleadosBindingSource).BeginInit();
             SuspendLayout();
             // 
             // btnBuscar
@@ -192,88 +196,6 @@
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = false;
             iconButton1.Click += iconButton1_Click;
-            // 
-            // dgvEmpleados
-            // 
-            dgvEmpleados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvEmpleados.BackgroundColor = SystemColors.ControlDarkDark;
-            dgvEmpleados.BorderStyle = BorderStyle.None;
-            dgvEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmpleados.Columns.AddRange(new DataGridViewColumn[] { ID, NOMBRE, APELLIDO, CEDULA, NACIMIENTO, GENERO, PUESTO, FINGRESO, ESTADO });
-            dgvEmpleados.GridColor = SystemColors.HotTrack;
-            dgvEmpleados.Location = new Point(0, 360);
-            dgvEmpleados.Margin = new Padding(3, 2, 3, 2);
-            dgvEmpleados.Name = "dgvEmpleados";
-            dgvEmpleados.RowHeadersWidth = 51;
-            dgvEmpleados.Size = new Size(1170, 207);
-            dgvEmpleados.TabIndex = 48;
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.BackColor = SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            ID.DefaultCellStyle = dataGridViewCellStyle1;
-            ID.HeaderText = "Id_Empleado";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.Width = 117;
-            // 
-            // NOMBRE
-            // 
-            NOMBRE.HeaderText = "Nombre_Empleado";
-            NOMBRE.MinimumWidth = 6;
-            NOMBRE.Name = "NOMBRE";
-            NOMBRE.Width = 125;
-            // 
-            // APELLIDO
-            // 
-            APELLIDO.HeaderText = "Apellido_Empleado";
-            APELLIDO.MinimumWidth = 6;
-            APELLIDO.Name = "APELLIDO";
-            APELLIDO.Width = 125;
-            // 
-            // CEDULA
-            // 
-            CEDULA.HeaderText = "Cedula_Empleado";
-            CEDULA.MinimumWidth = 6;
-            CEDULA.Name = "CEDULA";
-            CEDULA.Width = 125;
-            // 
-            // NACIMIENTO
-            // 
-            NACIMIENTO.HeaderText = "F_Nacimiento";
-            NACIMIENTO.MinimumWidth = 6;
-            NACIMIENTO.Name = "NACIMIENTO";
-            NACIMIENTO.Width = 125;
-            // 
-            // GENERO
-            // 
-            GENERO.HeaderText = "Genero";
-            GENERO.MinimumWidth = 6;
-            GENERO.Name = "GENERO";
-            GENERO.Width = 125;
-            // 
-            // PUESTO
-            // 
-            PUESTO.HeaderText = "Puesto";
-            PUESTO.MinimumWidth = 6;
-            PUESTO.Name = "PUESTO";
-            PUESTO.Width = 125;
-            // 
-            // FINGRESO
-            // 
-            FINGRESO.HeaderText = "F_Ingreso";
-            FINGRESO.MinimumWidth = 6;
-            FINGRESO.Name = "FINGRESO";
-            FINGRESO.Width = 125;
-            // 
-            // ESTADO
-            // 
-            ESTADO.HeaderText = "Estado";
-            ESTADO.MinimumWidth = 6;
-            ESTADO.Name = "ESTADO";
-            ESTADO.Width = 125;
             // 
             // textBox3
             // 
@@ -599,7 +521,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.DimGray;
+            panel3.BackColor = Color.DarkGray;
             panel3.Controls.Add(tableLayoutPanel1);
             panel3.Controls.Add(flowLayoutPanel4);
             panel3.Dock = DockStyle.Top;
@@ -645,6 +567,15 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Size = new Size(833, 239);
             tableLayoutPanel1.TabIndex = 91;
+            // 
+            // txtEstado
+            // 
+            txtEstado.Anchor = AnchorStyles.Left;
+            txtEstado.Location = new Point(542, 153);
+            txtEstado.Margin = new Padding(3, 2, 3, 2);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(274, 22);
+            txtEstado.TabIndex = 99;
             // 
             // dateIngreso
             // 
@@ -720,13 +651,13 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = SystemColors.ControlDarkDark;
             panel1.Controls.Add(label10);
+            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 294);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1168, 70);
-            panel1.TabIndex = 94;
+            panel1.Size = new Size(1170, 70);
+            panel1.TabIndex = 96;
             // 
             // label10
             // 
@@ -734,20 +665,112 @@
             label10.AutoSize = true;
             label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(451, 24);
+            label10.Location = new Point(414, 24);
             label10.Name = "label10";
             label10.Size = new Size(286, 25);
             label10.TabIndex = 0;
             label10.Text = "EMPLEADOS REGISTRADOS";
             // 
-            // txtEstado
+            // dgvEmpleados
             // 
-            txtEstado.Anchor = AnchorStyles.Left;
-            txtEstado.Location = new Point(542, 153);
-            txtEstado.Margin = new Padding(3, 2, 3, 2);
-            txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(274, 22);
-            txtEstado.TabIndex = 99;
+            dgvEmpleados.AutoGenerateColumns = false;
+            dgvEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEmpleados.BackgroundColor = SystemColors.ControlDarkDark;
+            dgvEmpleados.BorderStyle = BorderStyle.None;
+            dgvEmpleados.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
+            dgvEmpleados.ColumnHeadersHeight = 29;
+            dgvEmpleados.Columns.AddRange(new DataGridViewColumn[] { idEmpleadoDataGridViewTextBoxColumn, fKidPuestoDataGridViewTextBoxColumn, empleadoNombresDataGridViewTextBoxColumn, empleadoApellidosDataGridViewTextBoxColumn, empleadoCedulaDataGridViewTextBoxColumn, empleadoCorreoDataGridViewTextBoxColumn, empleadoFechaNacimientoDataGridViewTextBoxColumn, empleadoEstadoDataGridViewTextBoxColumn, empleadoGeneroDataGridViewTextBoxColumn, empleadoTelfPersonalDataGridViewTextBoxColumn, empleadoFechaIngresoDataGridViewTextBoxColumn });
+            dgvEmpleados.DataSource = empleadosBindingSource;
+            dgvEmpleados.Dock = DockStyle.Fill;
+            dgvEmpleados.GridColor = SystemColors.HotTrack;
+            dgvEmpleados.Location = new Point(0, 364);
+            dgvEmpleados.Margin = new Padding(3, 2, 3, 2);
+            dgvEmpleados.Name = "dgvEmpleados";
+            dgvEmpleados.RowHeadersWidth = 51;
+            dgvEmpleados.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvEmpleados.Size = new Size(1170, 203);
+            dgvEmpleados.TabIndex = 97;
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado";
+            idEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado";
+            idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // fKidPuestoDataGridViewTextBoxColumn
+            // 
+            fKidPuestoDataGridViewTextBoxColumn.DataPropertyName = "FKidPuesto";
+            fKidPuestoDataGridViewTextBoxColumn.HeaderText = "FKidPuesto";
+            fKidPuestoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            fKidPuestoDataGridViewTextBoxColumn.Name = "fKidPuestoDataGridViewTextBoxColumn";
+            // 
+            // empleadoNombresDataGridViewTextBoxColumn
+            // 
+            empleadoNombresDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoNombres";
+            empleadoNombresDataGridViewTextBoxColumn.HeaderText = "EmpleadoNombres";
+            empleadoNombresDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoNombresDataGridViewTextBoxColumn.Name = "empleadoNombresDataGridViewTextBoxColumn";
+            // 
+            // empleadoApellidosDataGridViewTextBoxColumn
+            // 
+            empleadoApellidosDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoApellidos";
+            empleadoApellidosDataGridViewTextBoxColumn.HeaderText = "EmpleadoApellidos";
+            empleadoApellidosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoApellidosDataGridViewTextBoxColumn.Name = "empleadoApellidosDataGridViewTextBoxColumn";
+            // 
+            // empleadoCedulaDataGridViewTextBoxColumn
+            // 
+            empleadoCedulaDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoCedula";
+            empleadoCedulaDataGridViewTextBoxColumn.HeaderText = "EmpleadoCedula";
+            empleadoCedulaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoCedulaDataGridViewTextBoxColumn.Name = "empleadoCedulaDataGridViewTextBoxColumn";
+            // 
+            // empleadoCorreoDataGridViewTextBoxColumn
+            // 
+            empleadoCorreoDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoCorreo";
+            empleadoCorreoDataGridViewTextBoxColumn.HeaderText = "EmpleadoCorreo";
+            empleadoCorreoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoCorreoDataGridViewTextBoxColumn.Name = "empleadoCorreoDataGridViewTextBoxColumn";
+            // 
+            // empleadoFechaNacimientoDataGridViewTextBoxColumn
+            // 
+            empleadoFechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoFechaNacimiento";
+            empleadoFechaNacimientoDataGridViewTextBoxColumn.HeaderText = "EmpleadoFechaNacimiento";
+            empleadoFechaNacimientoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoFechaNacimientoDataGridViewTextBoxColumn.Name = "empleadoFechaNacimientoDataGridViewTextBoxColumn";
+            // 
+            // empleadoEstadoDataGridViewTextBoxColumn
+            // 
+            empleadoEstadoDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoEstado";
+            empleadoEstadoDataGridViewTextBoxColumn.HeaderText = "EmpleadoEstado";
+            empleadoEstadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoEstadoDataGridViewTextBoxColumn.Name = "empleadoEstadoDataGridViewTextBoxColumn";
+            // 
+            // empleadoGeneroDataGridViewTextBoxColumn
+            // 
+            empleadoGeneroDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoGenero";
+            empleadoGeneroDataGridViewTextBoxColumn.HeaderText = "EmpleadoGenero";
+            empleadoGeneroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoGeneroDataGridViewTextBoxColumn.Name = "empleadoGeneroDataGridViewTextBoxColumn";
+            // 
+            // empleadoTelfPersonalDataGridViewTextBoxColumn
+            // 
+            empleadoTelfPersonalDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoTelfPersonal";
+            empleadoTelfPersonalDataGridViewTextBoxColumn.HeaderText = "EmpleadoTelfPersonal";
+            empleadoTelfPersonalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoTelfPersonalDataGridViewTextBoxColumn.Name = "empleadoTelfPersonalDataGridViewTextBoxColumn";
+            // 
+            // empleadoFechaIngresoDataGridViewTextBoxColumn
+            // 
+            empleadoFechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoFechaIngreso";
+            empleadoFechaIngresoDataGridViewTextBoxColumn.HeaderText = "EmpleadoFechaIngreso";
+            empleadoFechaIngresoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            empleadoFechaIngresoDataGridViewTextBoxColumn.Name = "empleadoFechaIngresoDataGridViewTextBoxColumn";
+            // 
+            // empleadosBindingSource
+            // 
+            empleadosBindingSource.DataSource = typeof(NominaPISIB.Infraestructura.AccesoDatos.Empleados);
             // 
             // F1Empleados
             // 
@@ -755,14 +778,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1170, 567);
             ControlBox = false;
+            Controls.Add(dgvEmpleados);
             Controls.Add(panel1);
             Controls.Add(panel3);
-            Controls.Add(dgvEmpleados);
             Font = new Font("Microsoft Sans Serif", 7.8F);
             Margin = new Padding(3, 2, 3, 2);
             Name = "F1Empleados";
             ShowIcon = false;
-            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             flowLayoutPanel4.ResumeLayout(false);
@@ -772,6 +794,8 @@
             tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
+            ((System.ComponentModel.ISupportInitialize)empleadosBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -786,7 +810,6 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private DataGridView dgvEmpleados;
         private Panel panel2;
         private TextBox textBox3;
         private TextBox textBox2;
@@ -827,18 +850,22 @@
         private Label label19;
         private PictureBox pictureBox1;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn NOMBRE;
-        private DataGridViewTextBoxColumn APELLIDO;
-        private DataGridViewTextBoxColumn CEDULA;
-        private DataGridViewTextBoxColumn NACIMIENTO;
-        private DataGridViewTextBoxColumn GENERO;
-        private DataGridViewTextBoxColumn PUESTO;
-        private DataGridViewTextBoxColumn FINGRESO;
-        private DataGridViewTextBoxColumn ESTADO;
-        private Panel panel1;
-        private Label label10;
         private DateTimePicker dateIngreso;
         private TextBox txtEstado;
+        private Panel panel1;
+        private Label label10;
+        private DataGridView dgvEmpleados;
+        private DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn fKidPuestoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoNombresDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoApellidosDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoCedulaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoCorreoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoFechaNacimientoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoEstadoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoGeneroDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoTelfPersonalDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn empleadoFechaIngresoDataGridViewTextBoxColumn;
+        private BindingSource empleadosBindingSource;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel2 = new TableLayoutPanel();
             textBox8 = new TextBox();
             textBox6 = new TextBox();
@@ -53,10 +54,24 @@
             iconButton3 = new FontAwesome.Sharp.IconButton();
             btnBuscar = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
-            dataGridView1 = new DataGridView();
+            panel2 = new Panel();
+            label4 = new Label();
+            dgvNomina = new DataGridView();
+            idNominaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            idEmpleadoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaMesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaAnioDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaSalarioBaseDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaBonificacionesDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaDescuentosDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaSalarioNetoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominaFechaEmisionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nominasBindingSource = new BindingSource(components);
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvNomina).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nominasBindingSource).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -385,22 +400,117 @@
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // panel2
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 235);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(995, 330);
-            dataGridView1.TabIndex = 89;
+            panel2.BackColor = SystemColors.ControlDarkDark;
+            panel2.Controls.Add(label4);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 230);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(995, 70);
+            panel2.TabIndex = 98;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(387, 20);
+            label4.Name = "label4";
+            label4.Size = new Size(156, 25);
+            label4.TabIndex = 0;
+            label4.Text = "REGISTRADOS";
+            // 
+            // dgvNomina
+            // 
+            dgvNomina.AutoGenerateColumns = false;
+            dgvNomina.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvNomina.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dgvNomina.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNomina.Columns.AddRange(new DataGridViewColumn[] { idNominaDataGridViewTextBoxColumn, idEmpleadoDataGridViewTextBoxColumn, nominaMesDataGridViewTextBoxColumn, nominaAnioDataGridViewTextBoxColumn, nominaSalarioBaseDataGridViewTextBoxColumn, nominaBonificacionesDataGridViewTextBoxColumn, nominaDescuentosDataGridViewTextBoxColumn, nominaSalarioNetoDataGridViewTextBoxColumn, nominaFechaEmisionDataGridViewTextBoxColumn });
+            dgvNomina.DataSource = nominasBindingSource;
+            dgvNomina.Dock = DockStyle.Fill;
+            dgvNomina.Location = new Point(0, 300);
+            dgvNomina.Name = "dgvNomina";
+            dgvNomina.RowHeadersWidth = 51;
+            dgvNomina.Size = new Size(995, 267);
+            dgvNomina.TabIndex = 90;
+            // 
+            // idNominaDataGridViewTextBoxColumn
+            // 
+            idNominaDataGridViewTextBoxColumn.DataPropertyName = "idNomina";
+            idNominaDataGridViewTextBoxColumn.HeaderText = "idNomina";
+            idNominaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idNominaDataGridViewTextBoxColumn.Name = "idNominaDataGridViewTextBoxColumn";
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado";
+            idEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado";
+            idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // nominaMesDataGridViewTextBoxColumn
+            // 
+            nominaMesDataGridViewTextBoxColumn.DataPropertyName = "NominaMes";
+            nominaMesDataGridViewTextBoxColumn.HeaderText = "NominaMes";
+            nominaMesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaMesDataGridViewTextBoxColumn.Name = "nominaMesDataGridViewTextBoxColumn";
+            // 
+            // nominaAnioDataGridViewTextBoxColumn
+            // 
+            nominaAnioDataGridViewTextBoxColumn.DataPropertyName = "NominaAnio";
+            nominaAnioDataGridViewTextBoxColumn.HeaderText = "NominaAnio";
+            nominaAnioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaAnioDataGridViewTextBoxColumn.Name = "nominaAnioDataGridViewTextBoxColumn";
+            // 
+            // nominaSalarioBaseDataGridViewTextBoxColumn
+            // 
+            nominaSalarioBaseDataGridViewTextBoxColumn.DataPropertyName = "NominaSalarioBase";
+            nominaSalarioBaseDataGridViewTextBoxColumn.HeaderText = "NominaSalarioBase";
+            nominaSalarioBaseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaSalarioBaseDataGridViewTextBoxColumn.Name = "nominaSalarioBaseDataGridViewTextBoxColumn";
+            // 
+            // nominaBonificacionesDataGridViewTextBoxColumn
+            // 
+            nominaBonificacionesDataGridViewTextBoxColumn.DataPropertyName = "NominaBonificaciones";
+            nominaBonificacionesDataGridViewTextBoxColumn.HeaderText = "NominaBonificaciones";
+            nominaBonificacionesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaBonificacionesDataGridViewTextBoxColumn.Name = "nominaBonificacionesDataGridViewTextBoxColumn";
+            // 
+            // nominaDescuentosDataGridViewTextBoxColumn
+            // 
+            nominaDescuentosDataGridViewTextBoxColumn.DataPropertyName = "NominaDescuentos";
+            nominaDescuentosDataGridViewTextBoxColumn.HeaderText = "NominaDescuentos";
+            nominaDescuentosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaDescuentosDataGridViewTextBoxColumn.Name = "nominaDescuentosDataGridViewTextBoxColumn";
+            // 
+            // nominaSalarioNetoDataGridViewTextBoxColumn
+            // 
+            nominaSalarioNetoDataGridViewTextBoxColumn.DataPropertyName = "NominaSalarioNeto";
+            nominaSalarioNetoDataGridViewTextBoxColumn.HeaderText = "NominaSalarioNeto";
+            nominaSalarioNetoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaSalarioNetoDataGridViewTextBoxColumn.Name = "nominaSalarioNetoDataGridViewTextBoxColumn";
+            // 
+            // nominaFechaEmisionDataGridViewTextBoxColumn
+            // 
+            nominaFechaEmisionDataGridViewTextBoxColumn.DataPropertyName = "NominaFechaEmision";
+            nominaFechaEmisionDataGridViewTextBoxColumn.HeaderText = "NominaFechaEmision";
+            nominaFechaEmisionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nominaFechaEmisionDataGridViewTextBoxColumn.Name = "nominaFechaEmisionDataGridViewTextBoxColumn";
+            // 
+            // nominasBindingSource
+            // 
+            nominasBindingSource.DataSource = typeof(NominaPISIB.Infraestructura.AccesoDatos.Nominas);
             // 
             // F3Nominas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(995, 567);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvNomina);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "F3Nominas";
@@ -409,7 +519,10 @@
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvNomina).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nominasBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -439,6 +552,18 @@
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox1;
-        private DataGridView dataGridView1;
+        private Panel panel2;
+        private Label label4;
+        private DataGridView dgvNomina;
+        private DataGridViewTextBoxColumn idNominaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaMesDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaAnioDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaSalarioBaseDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaBonificacionesDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaDescuentosDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaSalarioNetoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nominaFechaEmisionDataGridViewTextBoxColumn;
+        private BindingSource nominasBindingSource;
     }
 }
