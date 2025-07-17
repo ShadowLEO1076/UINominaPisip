@@ -6,13 +6,10 @@ using System.Text.Json.Serialization;
 
 namespace NominaPISIB.Infraestructura.AccesoDatos;
 
-public partial class Puestos
+public partial class EmpleadosVacacionesTotales
 {
-    public int idPuesto { get; set; }
+    public int idEmpleado { get; set; }
 
-    public string PuestoNombre { get; set; }
-
-    public decimal PuestoSalario { get; set; }
-
-
+    public int EmpleadoVacacionesTotales { get; set; }
+    
 }

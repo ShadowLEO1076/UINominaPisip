@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F7Puestos));
+            components = new System.ComponentModel.Container();
             tableLayoutPanel3 = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
             txtIdpuesto = new TextBox();
             txtPuestoNombre = new TextBox();
             txtPuestoSalario = new TextBox();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             dgvPuestos = new DataGridView();
+            idPuestoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            puestoNombreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            puestoSalarioDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            puestosBindingSource = new BindingSource(components);
             flowLayoutPanel1 = new FlowLayoutPanel();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             textBox1 = new TextBox();
@@ -51,15 +50,13 @@
             panel1 = new Panel();
             label10 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            txtVacacionesCantidad = new TextBox();
             tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPuestos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)puestosBindingSource).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,24 +64,21 @@
             // 
             tableLayoutPanel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
-            tableLayoutPanel3.Controls.Add(txtVacacionesCantidad, 1, 3);
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 34.7696877F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65.23031F));
             tableLayoutPanel3.Controls.Add(label1, 0, 0);
             tableLayoutPanel3.Controls.Add(label2, 0, 1);
             tableLayoutPanel3.Controls.Add(label3, 0, 2);
-            tableLayoutPanel3.Controls.Add(label4, 0, 3);
             tableLayoutPanel3.Controls.Add(txtIdpuesto, 1, 0);
             tableLayoutPanel3.Controls.Add(txtPuestoNombre, 1, 1);
             tableLayoutPanel3.Controls.Add(txtPuestoSalario, 1, 2);
             tableLayoutPanel3.Location = new Point(41, 39);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 4;
+            tableLayoutPanel3.RowCount = 3;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.Size = new Size(566, 216);
+            tableLayoutPanel3.Size = new Size(673, 216);
             tableLayoutPanel3.TabIndex = 97;
             // 
             // label1
@@ -92,7 +86,7 @@
             label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label1.Location = new Point(3, 17);
+            label1.Location = new Point(3, 26);
             label1.Name = "label1";
             label1.Size = new Size(79, 20);
             label1.TabIndex = 25;
@@ -103,7 +97,7 @@
             label2.Anchor = AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label2.Location = new Point(3, 71);
+            label2.Location = new Point(3, 98);
             label2.Name = "label2";
             label2.Size = new Size(120, 20);
             label2.TabIndex = 26;
@@ -114,88 +108,77 @@
             label3.Anchor = AnchorStyles.Left;
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label3.Location = new Point(3, 125);
+            label3.Location = new Point(3, 170);
             label3.Name = "label3";
             label3.Size = new Size(113, 20);
             label3.TabIndex = 29;
             label3.Text = "PuestoSalario";
             // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Left;
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 10.2F);
-            label4.Location = new Point(3, 169);
-            label4.Name = "label4";
-            label4.Size = new Size(160, 40);
-            label4.TabIndex = 27;
-            label4.Text = "PuestoVacacionesCantidad";
-            // 
             // txtIdpuesto
             // 
             txtIdpuesto.Anchor = AnchorStyles.Left;
-            txtIdpuesto.Location = new Point(172, 13);
+            txtIdpuesto.Location = new Point(237, 22);
             txtIdpuesto.Margin = new Padding(3, 2, 3, 2);
             txtIdpuesto.Name = "txtIdpuesto";
-            txtIdpuesto.Size = new Size(273, 27);
+            txtIdpuesto.Size = new Size(433, 27);
             txtIdpuesto.TabIndex = 32;
             // 
             // txtPuestoNombre
             // 
             txtPuestoNombre.Anchor = AnchorStyles.Left;
-            txtPuestoNombre.Location = new Point(172, 67);
+            txtPuestoNombre.Location = new Point(237, 94);
             txtPuestoNombre.Margin = new Padding(3, 2, 3, 2);
             txtPuestoNombre.Name = "txtPuestoNombre";
-            txtPuestoNombre.Size = new Size(273, 27);
+            txtPuestoNombre.Size = new Size(433, 27);
             txtPuestoNombre.TabIndex = 30;
             // 
             // txtPuestoSalario
             // 
             txtPuestoSalario.Anchor = AnchorStyles.Left;
-            txtPuestoSalario.Location = new Point(172, 121);
+            txtPuestoSalario.Location = new Point(237, 166);
             txtPuestoSalario.Margin = new Padding(3, 2, 3, 2);
             txtPuestoSalario.Name = "txtPuestoSalario";
-            txtPuestoSalario.Size = new Size(273, 27);
+            txtPuestoSalario.Size = new Size(433, 27);
             txtPuestoSalario.TabIndex = 31;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Column4";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Column3";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Column2";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
             // 
             // dgvPuestos
             // 
             dgvPuestos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dgvPuestos.AutoGenerateColumns = false;
+            dgvPuestos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPuestos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPuestos.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dgvPuestos.Location = new Point(5, 3);
+            dgvPuestos.Columns.AddRange(new DataGridViewColumn[] { idPuestoDataGridViewTextBoxColumn, puestoNombreDataGridViewTextBoxColumn, puestoSalarioDataGridViewTextBoxColumn });
+            dgvPuestos.DataSource = puestosBindingSource;
+            dgvPuestos.Location = new Point(3, 3);
             dgvPuestos.Name = "dgvPuestos";
             dgvPuestos.RowHeadersWidth = 51;
-            dgvPuestos.Size = new Size(557, 352);
+            dgvPuestos.Size = new Size(1236, 352);
             dgvPuestos.TabIndex = 0;
+            // 
+            // idPuestoDataGridViewTextBoxColumn
+            // 
+            idPuestoDataGridViewTextBoxColumn.DataPropertyName = "idPuesto";
+            idPuestoDataGridViewTextBoxColumn.HeaderText = "idPuesto";
+            idPuestoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idPuestoDataGridViewTextBoxColumn.Name = "idPuestoDataGridViewTextBoxColumn";
+            // 
+            // puestoNombreDataGridViewTextBoxColumn
+            // 
+            puestoNombreDataGridViewTextBoxColumn.DataPropertyName = "PuestoNombre";
+            puestoNombreDataGridViewTextBoxColumn.HeaderText = "PuestoNombre";
+            puestoNombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            puestoNombreDataGridViewTextBoxColumn.Name = "puestoNombreDataGridViewTextBoxColumn";
+            // 
+            // puestoSalarioDataGridViewTextBoxColumn
+            // 
+            puestoSalarioDataGridViewTextBoxColumn.DataPropertyName = "PuestoSalario";
+            puestoSalarioDataGridViewTextBoxColumn.HeaderText = "PuestoSalario";
+            puestoSalarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            puestoSalarioDataGridViewTextBoxColumn.Name = "puestoSalarioDataGridViewTextBoxColumn";
+            // 
+            // puestosBindingSource
+            // 
+            puestosBindingSource.DataSource = typeof(NominaPISIB.Infraestructura.AccesoDatos.Puestos);
             // 
             // flowLayoutPanel1
             // 
@@ -339,27 +322,15 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(dgvPuestos, 0, 0);
-            tableLayoutPanel1.Controls.Add(pictureBox1, 1, 0);
-            tableLayoutPanel1.Location = new Point(44, 363);
+            tableLayoutPanel1.Location = new Point(12, 363);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1130, 358);
+            tableLayoutPanel1.Size = new Size(1242, 358);
             tableLayoutPanel1.TabIndex = 100;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(568, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(511, 303);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -371,15 +342,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1257, 291);
             panel2.TabIndex = 101;
-            // 
-            // txtVacacionesCantidad
-            // 
-            txtVacacionesCantidad.Anchor = AnchorStyles.Left;
-            txtVacacionesCantidad.Location = new Point(172, 175);
-            txtVacacionesCantidad.Margin = new Padding(3, 2, 3, 2);
-            txtVacacionesCantidad.Name = "txtVacacionesCantidad";
-            txtVacacionesCantidad.Size = new Size(273, 27);
-            txtVacacionesCantidad.TabIndex = 33;
             // 
             // F7Puestos
             // 
@@ -395,12 +357,12 @@
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPuestos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)puestosBindingSource).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -415,15 +377,10 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private TextBox txtIdpuesto;
         private TextBox txtPuestoNombre;
         private TextBox txtPuestoSalario;
         private DateTimePicker dateTimePicker3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column1;
         private DataGridView dgvPuestos;
         private FlowLayoutPanel flowLayoutPanel1;
         private FontAwesome.Sharp.IconButton iconButton4;
@@ -434,8 +391,10 @@
         private Panel panel1;
         private Label label10;
         private TableLayoutPanel tableLayoutPanel1;
-        private PictureBox pictureBox1;
         private Panel panel2;
-        private TextBox txtVacacionesCantidad;
+        private BindingSource puestosBindingSource;
+        private DataGridViewTextBoxColumn idPuestoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn puestoNombreDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn puestoSalarioDataGridViewTextBoxColumn;
     }
 }

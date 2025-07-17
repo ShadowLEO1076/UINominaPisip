@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Nomina.API.Controllers;
 using NominaPISIB.Infraestructura.AccesoDatos;
+using System.Windows.Forms.DataVisualization.Charting;
+
+
 
 namespace WinNominaPisip._2.Vista
 {
@@ -30,6 +33,10 @@ namespace WinNominaPisip._2.Vista
             this.Load += F7Puestos_Load; // Asocia el evento de carga del formulario
 
         }
+        
+
+       
+
         public async Task CargarPuestos()
         {
             try
@@ -45,10 +52,13 @@ namespace WinNominaPisip._2.Vista
                 MessageBox.Show($"Error al cargar los puestos: {ex.Message}");
             }
         }
+        
+       
         private void F7Puestos_Load(object sender, EventArgs e)
         {
             LoadTheme();
-            CargarPuestos(); // Llama al método para cargar los empleados al iniciar el formulario
+            CargarPuestos();
+           
         }
 
         private void LoadTheme()
@@ -111,6 +121,9 @@ namespace WinNominaPisip._2.Vista
             Console.WriteLine("Botón de Reportes clickeado");
         }
 
-        
+        private void chartPuestos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
